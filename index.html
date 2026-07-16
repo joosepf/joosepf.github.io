@@ -1,133 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et" data-lang="et">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name — Portfolio</title>
-<meta name="description" content="Portfolio, documents, and gallery of Your Name.">
-<style>
-  /* ---- Design tokens ---- */
-  :root{
-    --ink:#141b2e;          /* deep slate navy — primary text */
-    --paper:#f6f4ef;        /* warm off-white ground */
-    --line:#c9c3b6;         /* hairline */
-    --accent:#3a5f5a;       /* muted pine — links & marks */
-    --accent-hot:#b8552d;   /* burnt sienna — hover/active */
-    --muted:#6a6559;        /* captions */
-    --shadow:0 1px 0 var(--line);
-  }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --ink:#eae6dc; --paper:#161a20; --line:#2f3742;
-      --accent:#8fc0b4; --accent-hot:#e08a5c; --muted:#9a978d;
-    }
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0; background:var(--paper); color:var(--ink);
-    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-    line-height:1.55; -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:760px; margin:0 auto; padding:clamp(2rem,6vw,5rem) 1.4rem 4rem;}
-
-  /* ---- Masthead ---- */
-  header{border-bottom:1px solid var(--line); padding-bottom:1.6rem; margin-bottom:2.6rem;}
-  .eyebrow{
-    font:600 .72rem/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-    letter-spacing:.22em; text-transform:uppercase; color:var(--muted); margin:0 0 1rem;
-  }
-  h1{
-    font-size:clamp(2.4rem,8vw,4rem); line-height:1.02; margin:0 0 .6rem;
-    font-weight:600; letter-spacing:-.01em;
-  }
-  .tagline{font-size:1.12rem; color:var(--muted); max-width:46ch; margin:0;}
-
-  /* ---- Sections ---- */
-  section{margin-top:3rem;}
-  h2{
-    font:600 .74rem/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-    letter-spacing:.22em; text-transform:uppercase; color:var(--accent);
-    margin:0 0 1.1rem; display:flex; align-items:center; gap:.8rem;
-  }
-  h2::after{content:""; flex:1; height:1px; background:var(--line);}
-
-  /* ---- Link rows (documents) ---- */
-  .rows{list-style:none; margin:0; padding:0;}
-  .rows li{border-bottom:1px solid var(--line);}
-  .rows a{
-    display:flex; align-items:baseline; gap:1rem; justify-content:space-between;
-    padding:.95rem .25rem; text-decoration:none; color:var(--ink);
-    transition:background .15s, padding .15s;
-  }
-  .rows a:hover,.rows a:focus-visible{
-    background:color-mix(in srgb,var(--accent) 9%,transparent);
-    padding-left:.7rem; outline:none;
-  }
-  .rows .name{font-size:1.15rem;}
-  .rows .meta{
-    font:500 .78rem/1 ui-monospace,Menlo,monospace; color:var(--muted);
-    white-space:nowrap;
-  }
-  .rows a:hover .meta{color:var(--accent-hot);}
-
-  /* ---- Gallery teaser ---- */
-  .gallery-cta{
-    display:inline-flex; align-items:center; gap:.6rem; text-decoration:none;
-    color:var(--paper); background:var(--accent); padding:.75rem 1.3rem;
-    border-radius:2px; font-size:1rem; transition:background .15s, transform .15s;
-  }
-  .gallery-cta:hover,.gallery-cta:focus-visible{background:var(--accent-hot); transform:translateX(3px); outline:none;}
-
-  /* ---- Contact / footer ---- */
-  footer{margin-top:3.5rem; padding-top:1.6rem; border-top:1px solid var(--line);
-    font-size:.95rem; color:var(--muted);}
-  footer a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent;}
-  footer a:hover{border-bottom-color:var(--accent-hot); color:var(--accent-hot);}
-
-  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#2b6cb0">
+<title>Joosep Fingling — Portfoolio / Portfolio</title>
+<meta name="description" content="Joosep Fingling — electronics, robotics, 3D printing and software projects.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>try{document.documentElement.dataset.lang=localStorage.getItem('site-lang')||'et';document.documentElement.setAttribute('lang',document.documentElement.dataset.lang)}catch(e){}</script>
+<link rel="stylesheet" href="assets/portfolio.css">
 </head>
 <body>
-<div class="wrap">
-
-  <header>
-    <p class="eyebrow">Portfolio · Est. 2026</p>
-    <h1>Your Name</h1>
-    <p class="tagline">Short one-line description of what you do — e.g. software engineering student &amp; interaction designer based in Estonia.</p>
-  </header>
-
-  <section id="documents">
-    <h2>Documents</h2>
-    <ul class="rows">
-      <li><a href="docs/cv.pdf">
-        <span class="name">Curriculum Vitae</span>
-        <span class="meta">PDF ↓</span></a></li>
-      <li><a href="docs/cover-letter.pdf">
-        <span class="name">Cover Letter</span>
-        <span class="meta">PDF ↓</span></a></li>
-      <li><a href="docs/project-report.pdf">
-        <span class="name">Sample Project Report</span>
-        <span class="meta">PDF ↓</span></a></li>
-    </ul>
+<header class="topbar">
+  <a class="brand" href="index.html">Joosep Fingling</a>
+  <nav>
+      
+      <a href="index.html#projects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
+      <a href="gallery.html"><span class="lang-et">Galerii</span><span class="lang-en">Gallery</span></a>
+      <a href="docs/cv.pdf">CV</a>
+    <span class="langtoggle" role="group" aria-label="Language">
+      <button type="button" data-set="et" aria-label="Eesti keeles">ET</button>
+      <button type="button" data-set="en" aria-label="In English">EN</button>
+    </span>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="masthead">
+    <p class="eyebrow"><span class="lang-et">Portfoolio</span><span class="lang-en">Portfolio</span></p>
+    <h1>Joosep Fingling</h1>
+    <p class="tagline">
+      <span class="lang-et">Valik minu projekte — elektroonika, robootika, 3D-printimine, tarkvara ja rohkelt praktilist meisterdamist.</span>
+      <span class="lang-en">A selection of my projects — electronics, robotics, 3D printing, software, and plenty of hands-on building.</span>
+    </p>
   </section>
 
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <p style="margin:0 0 1.2rem; color:var(--muted); max-width:50ch;">
-      A selection of visual work — photos, screenshots, and project shots.
-    </p>
-    <a class="gallery-cta" href="gallery.html">Open the gallery →</a>
+  <section id="projects">
+    <h2 class="seclabel">
+      <span class="lang-et">Projektid</span><span class="lang-en">Projects</span>
+      <span class="count">19</span>
+    </h2>
+    <div class="grid">
+    <a class="card" href="projects/radiobuttons.html">
+      <div class="thumb"><img src="images/projects/radiobuttons-1.png" alt="RadioButtons main window with station logos" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">Raadionupud (RadioButtons)</span><span class="lang-en">Radio Buttons (RadioButtons)</span></h3>
+        <p class="goal"><span class="lang-et">Luua lihtne ja mugav programm internetiraadio jaamade kuulamiseks ning nende vahel kiireks vahetamiseks.</span><span class="lang-en">A simple, convenient app for listening to internet radio stations and switching between them quickly.</span></p>
+        <div class="tags"><span class="tag lang-et">Python</span><span class="tag lang-et">PySimpleGUI</span><span class="tag lang-et">VLC</span><span class="tag lang-en">Python</span><span class="tag lang-en">PySimpleGUI</span><span class="tag lang-en">VLC</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/bt-adapter.html">
+      <div class="thumb"><img src="images/projects/bt-adapter-1.png" alt="BT adapter design" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">BT-adapter</span><span class="lang-en">BT adapter</span></h3>
+        <p class="goal"><span class="lang-et">Anda vanale autole, millel on vaid kassetimängija, Bluetooth-toega muusikamängija (kasseti kujul).</span><span class="lang-en">Give an old car that only has a cassette player a Bluetooth music player — in the shape of a cassette.</span></p>
+        <div class="tags"><span class="tag lang-et">3D-printimine</span><span class="tag lang-et">Fusion 360</span><span class="tag lang-et">elektroonika</span><span class="tag lang-en">3D printing</span><span class="tag lang-en">Fusion 360</span><span class="tag lang-en">electronics</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/prt.html">
+      <div class="thumb"><img src="images/projects/prt-1.png" alt="Energy-conversion teaching-aid diagram" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">Gümnaasiumi praktiline töö (PRT)</span><span class="lang-en">High-school practical project (PRT)</span></h3>
+        <p class="goal"><span class="lang-et">Tutvuda erinevate auto generaatoritega ning luua õppevahend energia muundamise demonstreerimiseks.</span><span class="lang-en">Get to know different automotive generators and build a teaching aid that demonstrates energy conversion.</span></p>
+        <div class="tags"><span class="tag lang-et">elektroonika</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-et">puutöö</span><span class="tag lang-en">electronics</span><span class="tag lang-en">3D printing &amp; design</span><span class="tag lang-en">woodworking</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/trafficbot.html">
+      <div class="thumb"><img src="images/projects/trafficbot-1.jpg" alt="Boe-Bot and the traffic light" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">Liiklusrobot (TrafficBot)</span><span class="lang-en">Traffic robot (TrafficBot)</span></h3>
+        <p class="goal"><span class="lang-et">Luua liiklusrobot, mis reageerib valgusfoori signaalidele, mis omakorda reageerivad liikluse hulgale.</span><span class="lang-en">Build a traffic robot that reacts to traffic-light signals, which in turn react to the amount of traffic.</span></p>
+        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-en">Arduino</span><span class="tag lang-en">3D printing &amp; design</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/psu-mod.html">
+      <div class="thumb"><img src="images/projects/psu-mod-1.png" alt="Modified power-supply enclosure" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">Toiteploki modifitseerimine</span><span class="lang-en">Power-supply modification</span></h3>
+        <p class="goal"><span class="lang-et">Modifitseerida vana arvuti toiteplokki, et saada lihtsaks kasutuseks standardsed pinged.</span><span class="lang-en">Modify an old computer power supply to provide standard voltages for easy use.</span></p>
+        <div class="tags"><span class="tag lang-et">elektroonika</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-en">electronics</span><span class="tag lang-en">3D printing &amp; design</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/laugen-motorsport.html">
+      <div class="thumb"><img src="images/projects/laugen-motorsport-1.jpg" alt="Laugen Motorsport merchandise" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">Laugen Motorsport fännitooted</span><span class="lang-en">Laugen Motorsport fan merchandise</span></h3>
+        <p class="goal"><span class="lang-et">Luua fännitooteid Laugen Motorsporti fännidele.</span><span class="lang-en">Create fan merchandise for Laugen Motorsport supporters.</span></p>
+        <div class="tags"><span class="tag lang-et">suhtlus</span><span class="tag lang-et">Excel</span><span class="tag lang-et">disain</span><span class="tag lang-en">communication</span><span class="tag lang-en">Excel</span><span class="tag lang-en">design</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/audi-80.html">
+      <div class="thumb noimg"><span>A</span></div>
+      <div class="body">
+        <h3><span class="lang-et">Audi 80 parandamine</span><span class="lang-en">Audi 80 restoration</span></h3>
+        <p class="goal"><span class="lang-et">Hoida vana auto töökorras ja turvaline igapäevaseks kasutamiseks.</span><span class="lang-en">Keep an old car running and safe for everyday use.</span></p>
+        <div class="tags"><span class="tag lang-et">automehaanika</span><span class="tag lang-en">car mechanics</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/speaker-eq.html">
+      <span class="badge ongoing"><span class="lang-et">Käimasolev</span><span class="lang-en">In&nbsp;progress</span></span><div class="thumb noimg"><span>S</span></div>
+      <div class="body">
+        <h3><span class="lang-et">Kõlar ja EQ</span><span class="lang-en">Speaker &amp; EQ</span></h3>
+        <p class="goal"><span class="lang-et">Luua kaasaskantav kõlar võimendi, ekraani ja ekvalaiseriga.</span><span class="lang-en">Build a portable speaker with an amplifier, a display and an equaliser.</span></p>
+        <div class="tags"><span class="tag lang-et">elektroonika</span><span class="tag lang-et">Arduino</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-en">electronics</span><span class="tag lang-en">Arduino</span><span class="tag lang-en">3D printing &amp; design</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/boe-bot.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>B</span></div>
+      <div class="body">
+        <h3><span class="lang-et">Boe-Bot voolumõõtja</span><span class="lang-en">Boe-Bot current meter</span></h3>
+        <p class="goal"><span class="lang-et">Luua lihtsalt kasutatav laiendusplaat, mille saab asetada Boe-Boti peale, et mõõta erinevate komponentide voolu.</span><span class="lang-en">Build an easy-to-use expansion board that mounts on top of the Boe-Bot to measure the current draw of its components.</span></p>
+        <div class="tags"><span class="tag lang-et">KiCad</span><span class="tag lang-et">LTSpice</span><span class="tag lang-en">KiCad</span><span class="tag lang-en">LTSpice</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/robot-platform.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb"><img src="images/projects/robot-platform-1.jpg" alt="3D-printed modular robot platform" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">Robotiplatvorm</span><span class="lang-en">Robot platform</span></h3>
+        <p class="goal"><span class="lang-et">Luua modulaarne robotiplatvorm, millele saab lihtsalt lisada erinevaid sensoreid ja laiendusi.</span><span class="lang-en">Create a modular robot platform to which different sensors and extensions can easily be added.</span></p>
+        <div class="tags"><span class="tag lang-et">Fusion 360</span><span class="tag lang-et">3D-printimine</span><span class="tag lang-et">Arduino</span><span class="tag lang-en">Fusion 360</span><span class="tag lang-en">3D printing</span><span class="tag lang-en">Arduino</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/phone-remote-robot.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>R</span></div>
+      <div class="body">
+        <h3><span class="lang-et">Robot telefoni puldiga</span><span class="lang-en">Robot with a phone remote</span></h3>
+        <p class="goal"><span class="lang-et">Kasutada telefoni güroskoopi ja muuta telefon roboti puldiks.</span><span class="lang-en">Use a phone&#x27;s gyroscope and turn the phone into the robot&#x27;s remote control.</span></p>
+        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-et">Bluetooth (HC-04)</span><span class="tag lang-en">Arduino</span><span class="tag lang-en">Bluetooth (HC-04)</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/line-follower.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>L</span></div>
+      <div class="body">
+        <h3><span class="lang-et">Joonejälgija robot</span><span class="lang-en">Line-following robot</span></h3>
+        <p class="goal"><span class="lang-et">Luua lihtne joonejälgija roboti katsetamiseks.</span><span class="lang-en">Build a simple line follower to experiment with the robot.</span></p>
+        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-en">Arduino</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/signal-generator.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>A</span></div>
+      <div class="body">
+        <h3><span class="lang-et">Arduino signaaligeneraator</span><span class="lang-en">Arduino signal generator</span></h3>
+        <p class="goal"><span class="lang-et">Luua signaaligeneraator, kasutades Arduinot ja takistite redelit.</span><span class="lang-en">Build a signal generator using an Arduino and a resistor ladder.</span></p>
+        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-en">Arduino</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/nameexporter.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb"><img src="images/projects/nameexporter-1.png" alt="NameExporter GTK4 interface" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">KJU (NameExporter)</span><span class="lang-en">KJU (NameExporter)</span></h3>
+        <p class="goal"><span class="lang-et">Luua õppejõule tarkvaraline lahendus, mis töötleb Moodle&#x27;ist saadud tudengite nimekirju ning esitab need soovitud vormingus.</span><span class="lang-en">Create a software tool for a lecturer that processes student lists exported from Moodle and outputs them in the desired format.</span></p>
+        <div class="tags"><span class="tag lang-et">C</span><span class="tag lang-et">GTK4</span><span class="tag lang-en">C</span><span class="tag lang-en">GTK4</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/movement-controller.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>M</span></div>
+      <div class="body">
+        <h3><span class="lang-et">Liikumist toetav mängupult</span><span class="lang-en">Movement-based game controller</span></h3>
+        <p class="goal"><span class="lang-et">Luua mängupult, mis sunnib mängijat liikuma.</span><span class="lang-en">Create a game controller that forces the player to move.</span></p>
+        <div class="tags"><span class="tag lang-et">Python</span><span class="tag lang-et">Arduino</span><span class="tag lang-en">Python</span><span class="tag lang-en">Arduino</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/flight-sim-controller.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>F</span></div>
+      <div class="body">
+        <h3><span class="lang-et">Lennusimulaatori kontroller</span><span class="lang-en">Flight-simulator controller</span></h3>
+        <p class="goal"><span class="lang-et">Luua soodne ja funktsionaalne lennusimulaatori juhtpult.</span><span class="lang-en">Build an affordable, functional flight-simulator control panel.</span></p>
+        <div class="tags"><span class="tag lang-et">puutöö</span><span class="tag lang-et">Python</span><span class="tag lang-et">Arduino</span><span class="tag lang-en">woodworking</span><span class="tag lang-en">Python</span><span class="tag lang-en">Arduino</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/watch-winder.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb"><img src="images/projects/watch-winder-1.jpg" alt="3D-printed watch winder" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">Kellalaadija</span><span class="lang-en">Watch winder</span></h3>
+        <p class="goal"><span class="lang-et">Luua mehaanilisele kellale laadimisseade, et vältida selle pidevat kandmist.</span><span class="lang-en">Create a winding device for a mechanical watch so it doesn&#x27;t have to be worn constantly.</span></p>
+        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-et">elektroonika</span><span class="tag lang-en">Arduino</span><span class="tag lang-en">3D printing &amp; design</span><span class="tag lang-en">electronics</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/film-warehouse.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>F</span></div>
+      <div class="body">
+        <h3><span class="lang-et">Filmiladu</span><span class="lang-en">Film warehouse</span></h3>
+        <p class="goal"><span class="lang-et">Luua lihtne andmebaasisüsteem filmide ja arvustuste haldamiseks.</span><span class="lang-en">Build a simple database system for managing films and reviews.</span></p>
+        <div class="tags"><span class="tag lang-et">C</span><span class="tag lang-en">C</span></div>
+      </div>
+    </a>
+    <a class="card" href="projects/sales-calculator.html">
+      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb"><img src="images/projects/sales-calculator-1.png" alt="Calculator output 1" loading="lazy"></div>
+      <div class="body">
+        <h3><span class="lang-et">Müügitulemuste kalkulaator</span><span class="lang-en">Sales-results calculator</span></h3>
+        <p class="goal"><span class="lang-et">Analüüsida müügiandmeid ja väljastada tulemused tekstina.</span><span class="lang-en">Analyse sales data and output the results as text.</span></p>
+        <div class="tags"><span class="tag lang-et">C</span><span class="tag lang-en">C</span></div>
+      </div>
+    </a>
+    </div>
   </section>
+</main>
 
-  <footer>
-    <p>Get in touch:
-      <a href="mailto:you@example.com">you@example.com</a> ·
-      <a href="https://github.com/yourusername">GitHub</a> ·
-      <a href="https://www.linkedin.com/in/yourusername">LinkedIn</a>
-    </p>
-  </footer>
-
-</div>
+<footer class="wrap" style="padding-top:0;">
+  <p>
+    <span class="lang-et">Võta ühendust:</span><span class="lang-en">Get in touch:</span>
+    <a href="mailto:joosepfi@gmail.com">joosepfi@gmail.com</a> ·
+    <a href="https://github.com/joosepf">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/joosep-fingling-432716b1/?skipRedirect=true">LinkedIn</a>
+  </p>
+</footer>
+<div class="lb" id="lightbox"><img src="" alt=""></div>
+<script src="assets/portfolio.js"></script>
 </body>
 </html>
