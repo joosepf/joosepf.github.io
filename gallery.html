@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Your Name</title>
+<style>
+  :root{
+    --ink:#141b2e; --paper:#f6f4ef; --line:#c9c3b6;
+    --accent:#3a5f5a; --accent-hot:#b8552d; --muted:#6a6559;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{--ink:#eae6dc; --paper:#161a20; --line:#2f3742;
+      --accent:#8fc0b4; --accent-hot:#e08a5c; --muted:#9a978d;}
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Iowan Old Style",Palatino,Georgia,serif;}
+  .wrap{max-width:1100px; margin:0 auto; padding:clamp(2rem,5vw,4rem) 1.4rem 4rem;}
+  .back{
+    display:inline-block; margin-bottom:1.6rem; text-decoration:none; color:var(--accent);
+    font:600 .8rem/1 ui-monospace,Menlo,monospace; letter-spacing:.08em;
+  }
+  .back:hover{color:var(--accent-hot);}
+  h1{font-size:clamp(2rem,6vw,3rem); font-weight:600; margin:0 0 .4rem; letter-spacing:-.01em;}
+  .sub{color:var(--muted); margin:0 0 2.5rem;}
+
+  /* Masonry-ish responsive grid */
+  .grid{
+    display:grid; gap:14px;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  }
+  .grid figure{margin:0; overflow:hidden; border-radius:3px; background:var(--line);
+    cursor:zoom-in; position:relative;}
+  .grid img{display:block; width:100%; height:100%; object-fit:cover; aspect-ratio:4/3;
+    transition:transform .4s ease;}
+  .grid figure:hover img{transform:scale(1.05);}
+  .grid figcaption{
+    position:absolute; left:0; right:0; bottom:0; padding:.6rem .8rem;
+    font-size:.85rem; color:#fff;
+    background:linear-gradient(transparent,rgba(0,0,0,.65));
+    opacity:0; transition:opacity .25s;
+  }
+  .grid figure:hover figcaption{opacity:1;}
+
+  /* Lightbox */
+  .lb{position:fixed; inset:0; background:rgba(10,10,14,.92); display:none;
+    align-items:center; justify-content:center; padding:2rem; cursor:zoom-out; z-index:10;}
+  .lb.open{display:flex;}
+  .lb img{max-width:100%; max-height:100%; border-radius:3px;}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">← Back to portfolio</a>
+  <h1>Gallery</h1>
+  <p class="sub">Replace these placeholders with your own images in the <code>images/</code> folder.</p>
+
+  <div class="grid" id="grid">
+    <!-- Duplicate a <figure> block for each image. -->
+    <figure><img src="images/photo-01.jpg" alt="Project one" loading="lazy"><figcaption>Project one</figcaption></figure>
+    <figure><img src="images/photo-02.jpg" alt="Project two" loading="lazy"><figcaption>Project two</figcaption></figure>
+    <figure><img src="images/photo-03.jpg" alt="Project three" loading="lazy"><figcaption>Project three</figcaption></figure>
+    <figure><img src="images/photo-04.jpg" alt="Project four" loading="lazy"><figcaption>Project four</figcaption></figure>
+    <figure><img src="images/photo-05.jpg" alt="Project five" loading="lazy"><figcaption>Project five</figcaption></figure>
+    <figure><img src="images/photo-06.jpg" alt="Project six" loading="lazy"><figcaption>Project six</figcaption></figure>
+  </div>
+</div>
+
+<div class="lb" id="lightbox"><img id="lb-img" src="" alt=""></div>
+
+<script>
+  const grid = document.getElementById('grid');
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  grid.addEventListener('click', e => {
+    const img = e.target.closest('img');
+    if(!img) return;
+    lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add('open');
+  });
+  lb.addEventListener('click', () => lb.classList.remove('open'));
+  document.addEventListener('keydown', e => { if(e.key==='Escape') lb.classList.remove('open'); });
+</script>
+</body>
+</html>

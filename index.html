@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Portfolio</title>
+<meta name="description" content="Portfolio, documents, and gallery of Your Name.">
+<style>
+  /* ---- Design tokens ---- */
+  :root{
+    --ink:#141b2e;          /* deep slate navy — primary text */
+    --paper:#f6f4ef;        /* warm off-white ground */
+    --line:#c9c3b6;         /* hairline */
+    --accent:#3a5f5a;       /* muted pine — links & marks */
+    --accent-hot:#b8552d;   /* burnt sienna — hover/active */
+    --muted:#6a6559;        /* captions */
+    --shadow:0 1px 0 var(--line);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#eae6dc; --paper:#161a20; --line:#2f3742;
+      --accent:#8fc0b4; --accent-hot:#e08a5c; --muted:#9a978d;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:clamp(2rem,6vw,5rem) 1.4rem 4rem;}
+
+  /* ---- Masthead ---- */
+  header{border-bottom:1px solid var(--line); padding-bottom:1.6rem; margin-bottom:2.6rem;}
+  .eyebrow{
+    font:600 .72rem/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--muted); margin:0 0 1rem;
+  }
+  h1{
+    font-size:clamp(2.4rem,8vw,4rem); line-height:1.02; margin:0 0 .6rem;
+    font-weight:600; letter-spacing:-.01em;
+  }
+  .tagline{font-size:1.12rem; color:var(--muted); max-width:46ch; margin:0;}
+
+  /* ---- Sections ---- */
+  section{margin-top:3rem;}
+  h2{
+    font:600 .74rem/1 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--accent);
+    margin:0 0 1.1rem; display:flex; align-items:center; gap:.8rem;
+  }
+  h2::after{content:""; flex:1; height:1px; background:var(--line);}
+
+  /* ---- Link rows (documents) ---- */
+  .rows{list-style:none; margin:0; padding:0;}
+  .rows li{border-bottom:1px solid var(--line);}
+  .rows a{
+    display:flex; align-items:baseline; gap:1rem; justify-content:space-between;
+    padding:.95rem .25rem; text-decoration:none; color:var(--ink);
+    transition:background .15s, padding .15s;
+  }
+  .rows a:hover,.rows a:focus-visible{
+    background:color-mix(in srgb,var(--accent) 9%,transparent);
+    padding-left:.7rem; outline:none;
+  }
+  .rows .name{font-size:1.15rem;}
+  .rows .meta{
+    font:500 .78rem/1 ui-monospace,Menlo,monospace; color:var(--muted);
+    white-space:nowrap;
+  }
+  .rows a:hover .meta{color:var(--accent-hot);}
+
+  /* ---- Gallery teaser ---- */
+  .gallery-cta{
+    display:inline-flex; align-items:center; gap:.6rem; text-decoration:none;
+    color:var(--paper); background:var(--accent); padding:.75rem 1.3rem;
+    border-radius:2px; font-size:1rem; transition:background .15s, transform .15s;
+  }
+  .gallery-cta:hover,.gallery-cta:focus-visible{background:var(--accent-hot); transform:translateX(3px); outline:none;}
+
+  /* ---- Contact / footer ---- */
+  footer{margin-top:3.5rem; padding-top:1.6rem; border-top:1px solid var(--line);
+    font-size:.95rem; color:var(--muted);}
+  footer a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent;}
+  footer a:hover{border-bottom-color:var(--accent-hot); color:var(--accent-hot);}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Portfolio · Est. 2026</p>
+    <h1>Your Name</h1>
+    <p class="tagline">Short one-line description of what you do — e.g. software engineering student &amp; interaction designer based in Estonia.</p>
+  </header>
+
+  <section id="documents">
+    <h2>Documents</h2>
+    <ul class="rows">
+      <li><a href="docs/cv.pdf">
+        <span class="name">Curriculum Vitae</span>
+        <span class="meta">PDF ↓</span></a></li>
+      <li><a href="docs/cover-letter.pdf">
+        <span class="name">Cover Letter</span>
+        <span class="meta">PDF ↓</span></a></li>
+      <li><a href="docs/project-report.pdf">
+        <span class="name">Sample Project Report</span>
+        <span class="meta">PDF ↓</span></a></li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p style="margin:0 0 1.2rem; color:var(--muted); max-width:50ch;">
+      A selection of visual work — photos, screenshots, and project shots.
+    </p>
+    <a class="gallery-cta" href="gallery.html">Open the gallery →</a>
+  </section>
+
+  <footer>
+    <p>Get in touch:
+      <a href="mailto:you@example.com">you@example.com</a> ·
+      <a href="https://github.com/yourusername">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/yourusername">LinkedIn</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
