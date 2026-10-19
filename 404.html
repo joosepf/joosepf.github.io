@@ -4,37 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#2b6cb0">
-<title>404 — Joosep Fingling</title>
+<meta name="theme-color" content="#8ccbf7">
+<title>404 | Joosep Fingling</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<script>try{document.documentElement.dataset.lang=localStorage.getItem('site-lang')||'et';document.documentElement.setAttribute('lang',document.documentElement.dataset.lang)}catch(e){}</script>
+<script>try{var l=localStorage.getItem('site-lang')==='en'?'en':'et';document.documentElement.dataset.lang=l;document.documentElement.setAttribute('lang',l)}catch(e){}</script>
 <link rel="stylesheet" href="/assets/portfolio.css">
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="/index.html">Joosep Fingling</a>
-  <nav>
-    <a href="/index.html#projects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
-    <a href="/gallery.html"><span class="lang-et">Galerii</span><span class="lang-en">Gallery</span></a>
-    <a href="/docs/cv.pdf">CV</a>
-    <span class="langtoggle" role="group" aria-label="Language">
-      <button type="button" data-set="et" aria-label="Eesti keeles">ET</button>
-      <button type="button" data-set="en" aria-label="In English">EN</button>
-    </span>
-  </nav>
+  <div class="topbar-in">
+    <a class="brand" href="/index.html">Joosep Fingling</a>
+    <nav>
+      <a href="/index.html#fsprojects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
+      <a href="/gallery.html"><span class="lang-et">Galerii</span><span class="lang-en">Gallery</span></a>
+      <a class="lang-et" href="/docs/cv-et.pdf">CV</a><a class="lang-en" href="/docs/cv-en.pdf">CV</a>
+      <span class="langtoggle" role="group" aria-label="Language">
+        <button type="button" data-set="et" aria-label="Eesti keeles">ET</button><span aria-hidden="true">/</span><button type="button" data-set="en" aria-label="In English">EN</button>
+      </span>
+    </nav>
+  </div>
 </header>
-<main class="wrap narrow" style="text-align:center; padding-top:clamp(3rem,10vh,6rem);">
-  <p class="eyebrow" style="justify-content:center;">404</p>
-  <h1 style="font-size:clamp(2rem,7vw,3.4rem); font-weight:600; margin:0 0 1rem;">
-    <span class="lang-et">Lehte ei leitud</span><span class="lang-en">Page not found</span>
-  </h1>
-  <p style="color:var(--muted); max-width:48ch; margin:0 auto 2rem;">
-    <span class="lang-et">Kahjuks sellist lehte pole olemas. Võib-olla on link vananenud.</span>
-    <span class="lang-en">Sorry, that page doesn’t exist — the link may be out of date.</span>
+<main class="wrap narrow">
+  <h1 style="margin-top:40px"><span class="lang-et">Lehte ei leitud</span><span class="lang-en">Page not found</span></h1>
+  <p>
+    <span class="lang-et">Sellist lehte pole. Võib-olla on link vananenud.</span>
+    <span class="lang-en">This page doesn't exist. The link may be out of date.</span>
   </p>
-  <p class="links" style="justify-content:center;">
-    <a href="/index.html"><span class="lang-et">← Tagasi avalehele</span><span class="lang-en">← Back to home</span></a>
-  </p>
+  <p><a href="/index.html"><span class="lang-et">← Avalehele</span><span class="lang-en">← Back to the home page</span></a></p>
 </main>
 <script src="/assets/portfolio.js"></script>
 </body>

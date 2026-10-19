@@ -4,208 +4,305 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#2b6cb0">
-<title>Joosep Fingling — Portfoolio / Portfolio</title>
-<meta name="description" content="Joosep Fingling — electronics, robotics, 3D printing and software projects.">
+<meta name="theme-color" content="#8ccbf7">
+<title>Joosep Fingling</title>
+<meta name="description" content="Portfolio of Joosep Fingling: hardware student at TalTech and team captain of FS Team Tallinn.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<script>try{document.documentElement.dataset.lang=localStorage.getItem('site-lang')||'et';document.documentElement.setAttribute('lang',document.documentElement.dataset.lang)}catch(e){}</script>
+<script>try{var l=localStorage.getItem('site-lang')==='en'?'en':'et';document.documentElement.dataset.lang=l;document.documentElement.setAttribute('lang',l)}catch(e){}</script>
 <link rel="stylesheet" href="assets/portfolio.css">
 </head>
 <body>
 <header class="topbar">
-  <a class="brand" href="index.html">Joosep Fingling</a>
-  <nav>
-      
-      <a href="index.html#projects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
+  <div class="topbar-in">
+    <a class="brand" href="index.html">Joosep Fingling</a>
+    <nav>
+      <a href="index.html#fsprojects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
       <a href="gallery.html"><span class="lang-et">Galerii</span><span class="lang-en">Gallery</span></a>
-      <a href="docs/cv.pdf">CV</a>
-    <span class="langtoggle" role="group" aria-label="Language">
-      <button type="button" data-set="et" aria-label="Eesti keeles">ET</button>
-      <button type="button" data-set="en" aria-label="In English">EN</button>
-    </span>
-  </nav>
+      <a class="lang-et" href="docs/cv-et.pdf">CV</a><a class="lang-en" href="docs/cv-en.pdf">CV</a>
+      <span class="langtoggle" role="group" aria-label="Language">
+        <button type="button" data-set="et" aria-label="Eesti keeles">ET</button><span aria-hidden="true">/</span><button type="button" data-set="en" aria-label="In English">EN</button>
+      </span>
+    </nav>
+  </div>
 </header>
+<section class="hero">
+  <div class="hero-in">
+    <img class="portrait" src="images/joosep.jpg" alt="Joosep Fingling" width="200" height="240">
+    <div class="hero-text">
+      <h1>Joosep Fingling</h1>
+      <p class="role"><span class="lang-et">FS Team Tallinna meeskonnakapten (tegevjuht)</span><span class="lang-en">Team Captain (CEO), FS Team Tallinn</span><br>
+        <span class="lang-et">Riistvara arendus ja programmeerimine, TalTech</span><span class="lang-en">Hardware Engineering and Programming, TalTech</span></p>
+      <p class="intro">
+        <span class="lang-et">Õpin TalTechis riistvara arendust ja programmeerimist ning juhin FS Team Tallinna. Enne seda tegelesin meeskonnas auto elektromagnetilise ühilduvuse ja mõõtmistega. Siin on minu projektid vormelist, koolist ja vabast ajast.</span>
+        <span class="lang-en">I study hardware engineering and programming at TalTech and lead FS Team Tallinn. Before that I worked on the car's electromagnetic compatibility and measurements. Below are my projects from the team, from university and from my free time.</span>
+      </p>
+      <p class="contact"><a href="mailto:joosepfi@gmail.com">joosepfi@gmail.com</a><span class="sep"> · </span><a href="https://github.com/joosepf">GitHub</a><span class="sep"> · </span><a href="https://www.linkedin.com/in/joosep-fingling-432716b1/">LinkedIn</a><span class="sep"> · </span><a class="lang-et" href="docs/cv-et.pdf">CV</a><a class="lang-en" href="docs/cv-en.pdf">CV</a></p>
+    </div>
+  </div>
+</section>
 <main class="wrap">
-  <section class="masthead">
-    <p class="eyebrow"><span class="lang-et">Portfoolio</span><span class="lang-en">Portfolio</span></p>
-    <h1>Joosep Fingling</h1>
-    <p class="tagline">
-      <span class="lang-et">Valik minu projekte — elektroonika, robootika, 3D-printimine, tarkvara ja rohkelt praktilist meisterdamist.</span>
-      <span class="lang-en">A selection of my projects — electronics, robotics, 3D printing, software, and plenty of hands-on building.</span>
-    </p>
+  <div class="filterbar" id="filters" hidden>
+    <span class="lang-et">Sildiga</span><span class="lang-en">Tagged</span> <span class="tag filter-tag"></span>
+    <span class="filter-count"></span>
+    <button type="button" class="filter-clear"><span class="lang-et">Näita kõiki projekte</span><span class="lang-en">Show all projects</span></button>
+  </div>
+  <section class="projsec" id="fsprojects">
+    <h2><span class="lang-et">Tudengivormel (FS Team Tallinn)</span><span class="lang-en">Formula Student (FS Team Tallinn)</span></h2>
+    <div class="grid">
+    <article class="card" data-tags="emc tdr can spectrum-analyser">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/fs-emc.html"><span class="lang-et">Võistlusauto EMC-katseprogramm</span><span class="lang-en">Race-car EMC test programme</span></a></h3>
+        <p><span class="lang-et">Leida ja lahendada FS Team Tallinna elektrilise võistlusauto elektromagnetilised häired (EMI).</span><span class="lang-en">Find and fix the electromagnetic interference (EMI) problems on FS Team Tallinn&#x27;s electric race car.</span></p>
+        <div class="tags"><a class="tag ee" data-tag="emc" href="index.html?tag=emc#filters"><span class="lang-et">EMC</span><span class="lang-en">EMC</span></a><a class="tag ee" data-tag="tdr" href="index.html?tag=tdr#filters"><span class="lang-et">TDR</span><span class="lang-en">TDR</span></a><a class="tag emb" data-tag="can" href="index.html?tag=can#filters"><span class="lang-et">CAN</span><span class="lang-en">CAN</span></a><a class="tag ee" data-tag="spectrum-analyser" href="index.html?tag=spectrum-analyser#filters"><span class="lang-et">Spektrianalüsaator</span><span class="lang-en">Spectrum analyser</span></a></div>
+      </div>
+    </article>
+    <article class="card" data-tags="altium-designer emc vna">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/near-field-probes.html"><span class="lang-et">Lähivälja sondid</span><span class="lang-en">Near-field probes</span></a></h3>
+        <p><span class="lang-et">Valmistada meeskonnale odavad lähivälja sondid, et leida auto trükkplaatidel ja juhtmestikus häirete allikad.</span><span class="lang-en">Build low-cost in-house near-field probes so the team can locate interference sources on the car&#x27;s PCBs and wiring.</span></p>
+        <div class="tags"><a class="tag ee" data-tag="altium-designer" href="index.html?tag=altium-designer#filters"><span class="lang-et">Altium Designer</span><span class="lang-en">Altium Designer</span></a><a class="tag ee" data-tag="emc" href="index.html?tag=emc#filters"><span class="lang-et">EMC</span><span class="lang-en">EMC</span></a><a class="tag ee" data-tag="vna" href="index.html?tag=vna#filters"><span class="lang-et">VNA</span><span class="lang-en">VNA</span></a></div>
+      </div>
+    </article>
+    <article class="card" data-tags="ltspice emc cad">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/comb-generator.html"><span class="lang-et">Kammgeneraator</span><span class="lang-en">Comb generator</span></a></h3>
+        <p><span class="lang-et">Valmistada kammgeneraator, mis annab teadaoleva ja korratava võrdlussignaali 0–1 GHz vahemikus sondide kalibreerimiseks ja võrdlemiseks.</span><span class="lang-en">Build a comb generator that gives a known, repeatable 0–1 GHz reference signal for calibrating and comparing the probes.</span></p>
+        <div class="tags"><a class="tag ee" data-tag="ltspice" href="index.html?tag=ltspice#filters"><span class="lang-et">LTspice</span><span class="lang-en">LTspice</span></a><a class="tag ee" data-tag="emc" href="index.html?tag=emc#filters"><span class="lang-et">EMC</span><span class="lang-en">EMC</span></a><a class="tag mech" data-tag="cad" href="index.html?tag=cad#filters"><span class="lang-et">CAD</span><span class="lang-en">CAD</span></a></div>
+      </div>
+    </article>
+    <article class="card" data-tags="python pyside6 python-can can-fd">
+      <img class="card-img" src="images/projects/canqueen-1.png" alt="CANQueen monitoring a CAN bus: DBC-decoded messages and the transmit panel (demo DBC)" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/canqueen.html"><span class="lang-et">CANQueen</span><span class="lang-en">CANQueen</span></a></h3>
+        <p><span class="lang-et">Luua CAN-siini monitor ja saatja, mis töötab eri tootjate ja avatud lähtekoodiga CAN-adapteritega.</span><span class="lang-en">Build a CAN bus monitor and transmitter that works with adapters from many manufacturers as well as open-source ones.</span></p>
+        <div class="tags"><a class="tag sw" data-tag="python" href="index.html?tag=python#filters"><span class="lang-et">Python</span><span class="lang-en">Python</span></a><a class="tag sw" data-tag="pyside6" href="index.html?tag=pyside6#filters"><span class="lang-et">PySide6</span><span class="lang-en">PySide6</span></a><a class="tag sw" data-tag="python-can" href="index.html?tag=python-can#filters"><span class="lang-et">python-can</span><span class="lang-en">python-can</span></a><a class="tag emb" data-tag="can-fd" href="index.html?tag=can-fd#filters"><span class="lang-et">CAN FD</span><span class="lang-en">CAN FD</span></a></div>
+      </div>
+    </article>
+    <article class="card" data-tags="python cantools kvaser-canlib">
+      <img class="card-img" src="images/projects/newlogconverter-1.png" alt="NewLogConverter main window: folders, DBC files and session naming" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/newlogconverter.html"><span class="lang-et">NewLogConverter</span><span class="lang-en">NewLogConverter</span></a></h3>
+        <p><span class="lang-et">Teisendada Kvaseri andmelogeri mälukaardi logid (.kmf) MoTeC i2 analüüsitarkvara jaoks (.ld).</span><span class="lang-en">Convert Kvaser data-logger memory-card logs (.kmf) into MoTeC .ld files for analysis in MoTeC i2.</span></p>
+        <div class="tags"><a class="tag sw" data-tag="python" href="index.html?tag=python#filters"><span class="lang-et">Python</span><span class="lang-en">Python</span></a><a class="tag sw" data-tag="cantools" href="index.html?tag=cantools#filters"><span class="lang-et">cantools</span><span class="lang-en">cantools</span></a><a class="tag sw" data-tag="kvaser-canlib" href="index.html?tag=kvaser-canlib#filters"><span class="lang-et">Kvaser CANlib</span><span class="lang-en">Kvaser CANlib</span></a></div>
+      </div>
+    </article>
+    <article class="card" data-tags="stm32 c freertos can-fd">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/usb-can-adapter.html"><span class="lang-et">USB–CAN FD adapter (DIY_KVASER)</span><span class="lang-en">USB-to-CAN FD adapter (DIY_KVASER)</span></a></h3>
+        <p><span class="lang-et">Anda meeskonnale odav USB–CAN-adapter, mis töötab ilma eraldi draiverita nii Windowsis kui ka Linuxis.</span><span class="lang-en">Give the team a low-cost USB-to-CAN adapter that works without extra drivers on both Windows and Linux.</span></p>
+        <div class="tags"><a class="tag emb" data-tag="stm32" href="index.html?tag=stm32#filters"><span class="lang-et">STM32</span><span class="lang-en">STM32</span></a><a class="tag sw" data-tag="c" href="index.html?tag=c#filters"><span class="lang-et">C</span><span class="lang-en">C</span></a><a class="tag emb" data-tag="freertos" href="index.html?tag=freertos#filters"><span class="lang-et">FreeRTOS</span><span class="lang-en">FreeRTOS</span></a><a class="tag emb" data-tag="can-fd" href="index.html?tag=can-fd#filters"><span class="lang-et">CAN FD</span><span class="lang-en">CAN FD</span></a></div>
+      </div>
+    </article>
+    <article class="card" data-tags="c zephyr-rtos can">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/fest26-dash.html"><span class="lang-et">FEST26 juhiekraani tarkvara</span><span class="lang-en">FEST26 driver-display firmware</span></a></h3>
+        <p><span class="lang-et">Arendada FEST26 juhiekraani tarkvara, mis näitab sõitjale auto olekut ja hoiatusi.</span><span class="lang-en">Develop the FEST26 driver-display firmware that shows the driver the car&#x27;s state and warnings.</span></p>
+        <div class="tags"><a class="tag sw" data-tag="c" href="index.html?tag=c#filters"><span class="lang-et">C</span><span class="lang-en">C</span></a><a class="tag emb" data-tag="zephyr-rtos" href="index.html?tag=zephyr-rtos#filters"><span class="lang-et">Zephyr RTOS</span><span class="lang-en">Zephyr RTOS</span></a><a class="tag emb" data-tag="can" href="index.html?tag=can#filters"><span class="lang-et">CAN</span><span class="lang-en">CAN</span></a></div>
+      </div>
+    </article>
+    <article class="card" data-tags="emc iso-11452 cispr-25">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/fs-noise-standard.html"><span class="lang-et">Lõputöö: tudengivormeli müra standard</span><span class="lang-en">Thesis: a noise-immunity standard for Formula Student</span></a></h3>
+        <p><span class="lang-et">Välja selgitada, millise müra juures FEST26 elektroonikaplaadid hakkavad valesti töötama, ning koostada meeskonnale mürataluvuse standard.</span><span class="lang-en">Find out at what noise levels the FEST26 electronics boards start to misbehave, and turn the results into a noise-immunity standard for the team.</span></p>
+        <div class="tags"><a class="tag ee" data-tag="emc" href="index.html?tag=emc#filters"><span class="lang-et">EMC</span><span class="lang-en">EMC</span></a><a class="tag ee" data-tag="iso-11452" href="index.html?tag=iso-11452#filters"><span class="lang-et">ISO 11452</span><span class="lang-en">ISO 11452</span></a><a class="tag ee" data-tag="cispr-25" href="index.html?tag=cispr-25#filters"><span class="lang-et">CISPR 25</span><span class="lang-en">CISPR 25</span></a><span class="tag ongoing"><span class="lang-et">pooleli</span><span class="lang-en">in progress</span></span></div>
+      </div>
+    </article>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2 class="seclabel">
-      <span class="lang-et">Projektid</span><span class="lang-en">Projects</span>
-      <span class="count">19</span>
-    </h2>
+  <section class="projsec" id="projects">
+    <h2><span class="lang-et">Muud projektid</span><span class="lang-en">Other projects</span></h2>
     <div class="grid">
-    <a class="card" href="projects/radiobuttons.html">
-      <div class="thumb"><img src="images/projects/radiobuttons-1.png" alt="RadioButtons main window with station logos" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">Raadionupud (RadioButtons)</span><span class="lang-en">Radio Buttons (RadioButtons)</span></h3>
-        <p class="goal"><span class="lang-et">Luua lihtne ja mugav programm internetiraadio jaamade kuulamiseks ning nende vahel kiireks vahetamiseks.</span><span class="lang-en">A simple, convenient app for listening to internet radio stations and switching between them quickly.</span></p>
-        <div class="tags"><span class="tag lang-et">Python</span><span class="tag lang-et">PySimpleGUI</span><span class="tag lang-et">VLC</span><span class="tag lang-en">Python</span><span class="tag lang-en">PySimpleGUI</span><span class="tag lang-en">VLC</span></div>
+    <article class="card" data-tags="python pysimplegui vlc">
+      <img class="card-img" src="images/projects/radiobuttons-1.png" alt="RadioButtons main window with station logos" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/radiobuttons.html"><span class="lang-et">Raadionupud (RadioButtons)</span><span class="lang-en">Radio Buttons (RadioButtons)</span></a></h3>
+        <p><span class="lang-et">Luua lihtne ja mugav programm internetiraadio jaamade kuulamiseks ning nende vahel kiireks vahetamiseks.</span><span class="lang-en">A simple, convenient app for listening to internet radio stations and switching between them quickly.</span></p>
+        <div class="tags"><a class="tag sw" data-tag="python" href="index.html?tag=python#filters"><span class="lang-et">Python</span><span class="lang-en">Python</span></a><a class="tag sw" data-tag="pysimplegui" href="index.html?tag=pysimplegui#filters"><span class="lang-et">PySimpleGUI</span><span class="lang-en">PySimpleGUI</span></a><a class="tag sw" data-tag="vlc" href="index.html?tag=vlc#filters"><span class="lang-et">VLC</span><span class="lang-en">VLC</span></a></div>
       </div>
-    </a>
-    <a class="card" href="projects/bt-adapter.html">
-      <div class="thumb"><img src="images/projects/bt-adapter-1.png" alt="BT adapter design" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">BT-adapter</span><span class="lang-en">BT adapter</span></h3>
-        <p class="goal"><span class="lang-et">Anda vanale autole, millel on vaid kassetimängija, Bluetooth-toega muusikamängija (kasseti kujul).</span><span class="lang-en">Give an old car that only has a cassette player a Bluetooth music player — in the shape of a cassette.</span></p>
-        <div class="tags"><span class="tag lang-et">3D-printimine</span><span class="tag lang-et">Fusion 360</span><span class="tag lang-et">elektroonika</span><span class="tag lang-en">3D printing</span><span class="tag lang-en">Fusion 360</span><span class="tag lang-en">electronics</span></div>
+    </article>
+    <article class="card" data-tags="3d-printing-design fusion-360 electronics">
+      <img class="card-img" src="images/projects/bt-adapter-1.png" alt="BT adapter design" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/bt-adapter.html"><span class="lang-et">BT-adapter</span><span class="lang-en">BT adapter</span></a></h3>
+        <p><span class="lang-et">Anda vanale autole, millel on vaid kassetimängija, Bluetooth-toega muusikamängija (kasseti kujul).</span><span class="lang-en">Give an old car that only has a cassette player a Bluetooth music player shaped like a cassette.</span></p>
+        <div class="tags"><a class="tag mech" data-tag="3d-printing-design" href="index.html?tag=3d-printing-design#filters"><span class="lang-et">3D-printimine ja disain</span><span class="lang-en">3D printing &amp; design</span></a><a class="tag mech" data-tag="fusion-360" href="index.html?tag=fusion-360#filters"><span class="lang-et">Fusion 360</span><span class="lang-en">Fusion 360</span></a><a class="tag ee" data-tag="electronics" href="index.html?tag=electronics#filters"><span class="lang-et">Elektroonika</span><span class="lang-en">Electronics</span></a></div>
       </div>
-    </a>
-    <a class="card" href="projects/prt.html">
-      <div class="thumb"><img src="images/projects/prt-1.png" alt="Energy-conversion teaching-aid diagram" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">Gümnaasiumi praktiline töö (PRT)</span><span class="lang-en">High-school practical project (PRT)</span></h3>
-        <p class="goal"><span class="lang-et">Tutvuda erinevate auto generaatoritega ning luua õppevahend energia muundamise demonstreerimiseks.</span><span class="lang-en">Get to know different automotive generators and build a teaching aid that demonstrates energy conversion.</span></p>
-        <div class="tags"><span class="tag lang-et">elektroonika</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-et">puutöö</span><span class="tag lang-en">electronics</span><span class="tag lang-en">3D printing &amp; design</span><span class="tag lang-en">woodworking</span></div>
+    </article>
+    <article class="card" data-tags="electronics 3d-printing-design woodworking">
+      <img class="card-img" src="images/projects/prt-1.png" alt="Energy-conversion teaching-aid diagram" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/prt.html"><span class="lang-et">Gümnaasiumi praktiline töö (PRT)</span><span class="lang-en">High-school practical project (PRT)</span></a></h3>
+        <p><span class="lang-et">Tutvuda erinevate auto generaatoritega ning luua õppevahend energia muundamise demonstreerimiseks.</span><span class="lang-en">Get to know different automotive generators and build a teaching aid that demonstrates energy conversion.</span></p>
+        <div class="tags"><a class="tag ee" data-tag="electronics" href="index.html?tag=electronics#filters"><span class="lang-et">Elektroonika</span><span class="lang-en">Electronics</span></a><a class="tag mech" data-tag="3d-printing-design" href="index.html?tag=3d-printing-design#filters"><span class="lang-et">3D-printimine ja disain</span><span class="lang-en">3D printing &amp; design</span></a><a class="tag mech" data-tag="woodworking" href="index.html?tag=woodworking#filters"><span class="lang-et">Puutöö</span><span class="lang-en">Woodworking</span></a></div>
       </div>
-    </a>
-    <a class="card" href="projects/trafficbot.html">
-      <div class="thumb"><img src="images/projects/trafficbot-1.jpg" alt="Boe-Bot and the traffic light" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">Liiklusrobot (TrafficBot)</span><span class="lang-en">Traffic robot (TrafficBot)</span></h3>
-        <p class="goal"><span class="lang-et">Luua liiklusrobot, mis reageerib valgusfoori signaalidele, mis omakorda reageerivad liikluse hulgale.</span><span class="lang-en">Build a traffic robot that reacts to traffic-light signals, which in turn react to the amount of traffic.</span></p>
-        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-en">Arduino</span><span class="tag lang-en">3D printing &amp; design</span></div>
+    </article>
+    <article class="card" data-tags="arduino 3d-printing-design">
+      <img class="card-img" src="images/projects/trafficbot-1.jpg" alt="Boe-Bot and the traffic light" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/trafficbot.html"><span class="lang-et">Liiklusrobot (TrafficBot)</span><span class="lang-en">Traffic robot (TrafficBot)</span></a></h3>
+        <p><span class="lang-et">Luua liiklusrobot, mis reageerib valgusfoori signaalidele, mis omakorda reageerivad liikluse hulgale.</span><span class="lang-en">Build a traffic robot that reacts to traffic-light signals, which in turn react to the amount of traffic.</span></p>
+        <div class="tags"><a class="tag emb" data-tag="arduino" href="index.html?tag=arduino#filters"><span class="lang-et">Arduino</span><span class="lang-en">Arduino</span></a><a class="tag mech" data-tag="3d-printing-design" href="index.html?tag=3d-printing-design#filters"><span class="lang-et">3D-printimine ja disain</span><span class="lang-en">3D printing &amp; design</span></a></div>
       </div>
-    </a>
-    <a class="card" href="projects/psu-mod.html">
-      <div class="thumb"><img src="images/projects/psu-mod-1.png" alt="Modified power-supply enclosure" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">Toiteploki modifitseerimine</span><span class="lang-en">Power-supply modification</span></h3>
-        <p class="goal"><span class="lang-et">Modifitseerida vana arvuti toiteplokki, et saada lihtsaks kasutuseks standardsed pinged.</span><span class="lang-en">Modify an old computer power supply to provide standard voltages for easy use.</span></p>
-        <div class="tags"><span class="tag lang-et">elektroonika</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-en">electronics</span><span class="tag lang-en">3D printing &amp; design</span></div>
+    </article>
+    <article class="card" data-tags="electronics 3d-printing-design">
+      <img class="card-img" src="images/projects/psu-mod-1.png" alt="Modified power-supply enclosure" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/psu-mod.html"><span class="lang-et">Toiteploki modifitseerimine</span><span class="lang-en">Power-supply modification</span></a></h3>
+        <p><span class="lang-et">Modifitseerida vana arvuti toiteplokki, et saada lihtsaks kasutuseks standardsed pinged.</span><span class="lang-en">Modify an old computer power supply to provide standard voltages for easy use.</span></p>
+        <div class="tags"><a class="tag ee" data-tag="electronics" href="index.html?tag=electronics#filters"><span class="lang-et">Elektroonika</span><span class="lang-en">Electronics</span></a><a class="tag mech" data-tag="3d-printing-design" href="index.html?tag=3d-printing-design#filters"><span class="lang-et">3D-printimine ja disain</span><span class="lang-en">3D printing &amp; design</span></a></div>
       </div>
-    </a>
-    <a class="card" href="projects/laugen-motorsport.html">
-      <div class="thumb"><img src="images/projects/laugen-motorsport-1.jpg" alt="Laugen Motorsport merchandise" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">Laugen Motorsport fännitooted</span><span class="lang-en">Laugen Motorsport fan merchandise</span></h3>
-        <p class="goal"><span class="lang-et">Luua fännitooteid Laugen Motorsporti fännidele.</span><span class="lang-en">Create fan merchandise for Laugen Motorsport supporters.</span></p>
-        <div class="tags"><span class="tag lang-et">suhtlus</span><span class="tag lang-et">Excel</span><span class="tag lang-et">disain</span><span class="tag lang-en">communication</span><span class="tag lang-en">Excel</span><span class="tag lang-en">design</span></div>
+    </article>
+    <article class="card" data-tags="communication excel design">
+      <img class="card-img" src="images/projects/laugen-motorsport-1.jpg" alt="Laugen Motorsport merchandise" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/laugen-motorsport.html"><span class="lang-et">Laugen Motorsport fännitooted</span><span class="lang-en">Laugen Motorsport fan merchandise</span></a></h3>
+        <p><span class="lang-et">Luua fännitooteid Laugen Motorsporti fännidele.</span><span class="lang-en">Create fan merchandise for Laugen Motorsport supporters.</span></p>
+        <div class="tags"><a class="tag other" data-tag="communication" href="index.html?tag=communication#filters"><span class="lang-et">Suhtlus</span><span class="lang-en">Communication</span></a><a class="tag other" data-tag="excel" href="index.html?tag=excel#filters"><span class="lang-et">Excel</span><span class="lang-en">Excel</span></a><a class="tag other" data-tag="design" href="index.html?tag=design#filters"><span class="lang-et">Disain</span><span class="lang-en">Design</span></a></div>
       </div>
-    </a>
-    <a class="card" href="projects/audi-80.html">
-      <div class="thumb noimg"><span>A</span></div>
-      <div class="body">
-        <h3><span class="lang-et">Audi 80 parandamine</span><span class="lang-en">Audi 80 restoration</span></h3>
-        <p class="goal"><span class="lang-et">Hoida vana auto töökorras ja turvaline igapäevaseks kasutamiseks.</span><span class="lang-en">Keep an old car running and safe for everyday use.</span></p>
-        <div class="tags"><span class="tag lang-et">automehaanika</span><span class="tag lang-en">car mechanics</span></div>
+    </article>
+    <article class="card" data-tags="car-mechanics">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/audi-80.html"><span class="lang-et">Audi 80 parandamine</span><span class="lang-en">Audi 80 repairs</span></a></h3>
+        <p><span class="lang-et">Hoida vana auto töökorras ja turvaline igapäevaseks kasutamiseks.</span><span class="lang-en">Keep an old car running and safe for everyday use.</span></p>
+        <div class="tags"><a class="tag mech" data-tag="car-mechanics" href="index.html?tag=car-mechanics#filters"><span class="lang-et">Automehaanika</span><span class="lang-en">Car mechanics</span></a></div>
       </div>
-    </a>
-    <a class="card" href="projects/speaker-eq.html">
-      <span class="badge ongoing"><span class="lang-et">Käimasolev</span><span class="lang-en">In&nbsp;progress</span></span><div class="thumb noimg"><span>S</span></div>
-      <div class="body">
-        <h3><span class="lang-et">Kõlar ja EQ</span><span class="lang-en">Speaker &amp; EQ</span></h3>
-        <p class="goal"><span class="lang-et">Luua kaasaskantav kõlar võimendi, ekraani ja ekvalaiseriga.</span><span class="lang-en">Build a portable speaker with an amplifier, a display and an equaliser.</span></p>
-        <div class="tags"><span class="tag lang-et">elektroonika</span><span class="tag lang-et">Arduino</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-en">electronics</span><span class="tag lang-en">Arduino</span><span class="tag lang-en">3D printing &amp; design</span></div>
+    </article>
+    <article class="card" data-tags="esp32 cplusplus platformio gsm">
+      <img class="card-img" src="images/projects/sms-station-1.png" alt="SMS station web interface: opening statistics (sample data)" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/sms-station.html"><span class="lang-et">SMS-jaam väravale</span><span class="lang-en">SMS gate station</span></a></h3>
+        <p><span class="lang-et">Ehitada GSM-jaam, millega saab värava avada telefonikõne või SMS-iga.</span><span class="lang-en">Build a GSM station that opens a gate with a phone call or a text message.</span></p>
+        <div class="tags"><a class="tag emb" data-tag="esp32" href="index.html?tag=esp32#filters"><span class="lang-et">ESP32</span><span class="lang-en">ESP32</span></a><a class="tag sw" data-tag="cplusplus" href="index.html?tag=cplusplus#filters"><span class="lang-et">C++</span><span class="lang-en">C++</span></a><a class="tag emb" data-tag="platformio" href="index.html?tag=platformio#filters"><span class="lang-et">PlatformIO</span><span class="lang-en">PlatformIO</span></a><a class="tag emb" data-tag="gsm" href="index.html?tag=gsm#filters"><span class="lang-et">GSM</span><span class="lang-en">GSM</span></a><span class="tag ongoing"><span class="lang-et">pooleli</span><span class="lang-en">in progress</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/boe-bot.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>B</span></div>
-      <div class="body">
-        <h3><span class="lang-et">Boe-Bot voolumõõtja</span><span class="lang-en">Boe-Bot current meter</span></h3>
-        <p class="goal"><span class="lang-et">Luua lihtsalt kasutatav laiendusplaat, mille saab asetada Boe-Boti peale, et mõõta erinevate komponentide voolu.</span><span class="lang-en">Build an easy-to-use expansion board that mounts on top of the Boe-Bot to measure the current draw of its components.</span></p>
-        <div class="tags"><span class="tag lang-et">KiCad</span><span class="tag lang-et">LTSpice</span><span class="tag lang-en">KiCad</span><span class="tag lang-en">LTSpice</span></div>
+    </article>
+    <article class="card" data-tags="python webots opencv">
+      <img class="card-img" src="images/projects/milrem-drone-1.jpg" alt="The drone camera detects the ArUco marker on the vehicle roof and the vehicle&#x27;s heading" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/milrem-drone.html"><span class="lang-et">Autonoomne droon (Milremi projekt)</span><span class="lang-en">Autonomous drone (Milrem project)</span></a></h3>
+        <p><span class="lang-et">Programmeerida Webotsi simulaatoris droon, mis täidab missiooni iseseisvalt ja maandub sihtsõidukile.</span><span class="lang-en">Program a drone in the Webots simulator that carries out its mission autonomously and lands on a target vehicle.</span></p>
+        <div class="tags"><a class="tag sw" data-tag="python" href="index.html?tag=python#filters"><span class="lang-et">Python</span><span class="lang-en">Python</span></a><a class="tag sw" data-tag="webots" href="index.html?tag=webots#filters"><span class="lang-et">Webots</span><span class="lang-en">Webots</span></a><a class="tag sw" data-tag="opencv" href="index.html?tag=opencv#filters"><span class="lang-et">OpenCV</span><span class="lang-en">OpenCV</span></a><span class="tag ongoing"><span class="lang-et">pooleli</span><span class="lang-en">in progress</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/robot-platform.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb"><img src="images/projects/robot-platform-1.jpg" alt="3D-printed modular robot platform" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">Robotiplatvorm</span><span class="lang-en">Robot platform</span></h3>
-        <p class="goal"><span class="lang-et">Luua modulaarne robotiplatvorm, millele saab lihtsalt lisada erinevaid sensoreid ja laiendusi.</span><span class="lang-en">Create a modular robot platform to which different sensors and extensions can easily be added.</span></p>
-        <div class="tags"><span class="tag lang-et">Fusion 360</span><span class="tag lang-et">3D-printimine</span><span class="tag lang-et">Arduino</span><span class="tag lang-en">Fusion 360</span><span class="tag lang-en">3D printing</span><span class="tag lang-en">Arduino</span></div>
+    </article>
+    <article class="card" data-tags="electronics arduino 3d-printing-design">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/speaker-eq.html"><span class="lang-et">Kõlar ja EQ</span><span class="lang-en">Speaker &amp; EQ</span></a></h3>
+        <p><span class="lang-et">Luua kaasaskantav kõlar võimendi, ekraani ja ekvalaiseriga.</span><span class="lang-en">Build a portable speaker with an amplifier, a display and an equaliser.</span></p>
+        <div class="tags"><a class="tag ee" data-tag="electronics" href="index.html?tag=electronics#filters"><span class="lang-et">Elektroonika</span><span class="lang-en">Electronics</span></a><a class="tag emb" data-tag="arduino" href="index.html?tag=arduino#filters"><span class="lang-et">Arduino</span><span class="lang-en">Arduino</span></a><a class="tag mech" data-tag="3d-printing-design" href="index.html?tag=3d-printing-design#filters"><span class="lang-et">3D-printimine ja disain</span><span class="lang-en">3D printing &amp; design</span></a><span class="tag ongoing"><span class="lang-et">pooleli</span><span class="lang-en">in progress</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/phone-remote-robot.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>R</span></div>
-      <div class="body">
-        <h3><span class="lang-et">Robot telefoni puldiga</span><span class="lang-en">Robot with a phone remote</span></h3>
-        <p class="goal"><span class="lang-et">Kasutada telefoni güroskoopi ja muuta telefon roboti puldiks.</span><span class="lang-en">Use a phone&#x27;s gyroscope and turn the phone into the robot&#x27;s remote control.</span></p>
-        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-et">Bluetooth (HC-04)</span><span class="tag lang-en">Arduino</span><span class="tag lang-en">Bluetooth (HC-04)</span></div>
+    </article>
+    <article class="card" data-tags="kicad ltspice">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/boe-bot.html"><span class="lang-et">Boe-Bot voolumõõtja</span><span class="lang-en">Boe-Bot current meter</span></a></h3>
+        <p><span class="lang-et">Luua lihtsalt kasutatav laiendusplaat, mille saab asetada Boe-Boti peale, et mõõta erinevate komponentide voolu.</span><span class="lang-en">Build an easy-to-use expansion board that mounts on top of the Boe-Bot to measure the current draw of its components.</span></p>
+        <div class="tags"><a class="tag ee" data-tag="kicad" href="index.html?tag=kicad#filters"><span class="lang-et">KiCad</span><span class="lang-en">KiCad</span></a><a class="tag ee" data-tag="ltspice" href="index.html?tag=ltspice#filters"><span class="lang-et">LTspice</span><span class="lang-en">LTspice</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/line-follower.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>L</span></div>
-      <div class="body">
-        <h3><span class="lang-et">Joonejälgija robot</span><span class="lang-en">Line-following robot</span></h3>
-        <p class="goal"><span class="lang-et">Luua lihtne joonejälgija roboti katsetamiseks.</span><span class="lang-en">Build a simple line follower to experiment with the robot.</span></p>
-        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-en">Arduino</span></div>
+    </article>
+    <article class="card" data-tags="arduino">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/signal-generator.html"><span class="lang-et">Arduino signaaligeneraator</span><span class="lang-en">Arduino signal generator</span></a></h3>
+        <p><span class="lang-et">Luua signaaligeneraator, kasutades Arduinot ja takistite redelit.</span><span class="lang-en">Build a signal generator using an Arduino and a resistor ladder.</span></p>
+        <div class="tags"><a class="tag emb" data-tag="arduino" href="index.html?tag=arduino#filters"><span class="lang-et">Arduino</span><span class="lang-en">Arduino</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/signal-generator.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>A</span></div>
-      <div class="body">
-        <h3><span class="lang-et">Arduino signaaligeneraator</span><span class="lang-en">Arduino signal generator</span></h3>
-        <p class="goal"><span class="lang-et">Luua signaaligeneraator, kasutades Arduinot ja takistite redelit.</span><span class="lang-en">Build a signal generator using an Arduino and a resistor ladder.</span></p>
-        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-en">Arduino</span></div>
+    </article>
+    <article class="card" data-tags="c gtk4">
+      <img class="card-img" src="images/projects/nameexporter-1.png" alt="NameExporter GTK4 interface" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/nameexporter.html"><span class="lang-et">KJU (NameExporter)</span><span class="lang-en">KJU (NameExporter)</span></a></h3>
+        <p><span class="lang-et">Luua õppejõule tarkvaraline lahendus, mis töötleb Moodle&#x27;ist saadud tudengite nimekirju ning esitab need soovitud vormingus.</span><span class="lang-en">Create a software tool for a lecturer that processes student lists exported from Moodle and outputs them in the desired format.</span></p>
+        <div class="tags"><a class="tag sw" data-tag="c" href="index.html?tag=c#filters"><span class="lang-et">C</span><span class="lang-en">C</span></a><a class="tag sw" data-tag="gtk4" href="index.html?tag=gtk4#filters"><span class="lang-et">GTK4</span><span class="lang-en">GTK4</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/nameexporter.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb"><img src="images/projects/nameexporter-1.png" alt="NameExporter GTK4 interface" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">KJU (NameExporter)</span><span class="lang-en">KJU (NameExporter)</span></h3>
-        <p class="goal"><span class="lang-et">Luua õppejõule tarkvaraline lahendus, mis töötleb Moodle&#x27;ist saadud tudengite nimekirju ning esitab need soovitud vormingus.</span><span class="lang-en">Create a software tool for a lecturer that processes student lists exported from Moodle and outputs them in the desired format.</span></p>
-        <div class="tags"><span class="tag lang-et">C</span><span class="tag lang-et">GTK4</span><span class="tag lang-en">C</span><span class="tag lang-en">GTK4</span></div>
+    </article>
+    <article class="card" data-tags="python arduino">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/movement-controller.html"><span class="lang-et">Liikumist toetav mängupult</span><span class="lang-en">Movement-based game controller</span></a></h3>
+        <p><span class="lang-et">Luua mängupult, mis sunnib mängijat liikuma.</span><span class="lang-en">Create a game controller that forces the player to move.</span></p>
+        <div class="tags"><a class="tag sw" data-tag="python" href="index.html?tag=python#filters"><span class="lang-et">Python</span><span class="lang-en">Python</span></a><a class="tag emb" data-tag="arduino" href="index.html?tag=arduino#filters"><span class="lang-et">Arduino</span><span class="lang-en">Arduino</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/movement-controller.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>M</span></div>
-      <div class="body">
-        <h3><span class="lang-et">Liikumist toetav mängupult</span><span class="lang-en">Movement-based game controller</span></h3>
-        <p class="goal"><span class="lang-et">Luua mängupult, mis sunnib mängijat liikuma.</span><span class="lang-en">Create a game controller that forces the player to move.</span></p>
-        <div class="tags"><span class="tag lang-et">Python</span><span class="tag lang-et">Arduino</span><span class="tag lang-en">Python</span><span class="tag lang-en">Arduino</span></div>
+    </article>
+    <article class="card" data-tags="woodworking python arduino">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/flight-sim-controller.html"><span class="lang-et">Lennusimulaatori kontroller</span><span class="lang-en">Flight-simulator controller</span></a></h3>
+        <p><span class="lang-et">Luua soodne ja funktsionaalne lennusimulaatori juhtpult.</span><span class="lang-en">Build an affordable, functional flight-simulator control panel.</span></p>
+        <div class="tags"><a class="tag mech" data-tag="woodworking" href="index.html?tag=woodworking#filters"><span class="lang-et">Puutöö</span><span class="lang-en">Woodworking</span></a><a class="tag sw" data-tag="python" href="index.html?tag=python#filters"><span class="lang-et">Python</span><span class="lang-en">Python</span></a><a class="tag emb" data-tag="arduino" href="index.html?tag=arduino#filters"><span class="lang-et">Arduino</span><span class="lang-en">Arduino</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/flight-sim-controller.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>F</span></div>
-      <div class="body">
-        <h3><span class="lang-et">Lennusimulaatori kontroller</span><span class="lang-en">Flight-simulator controller</span></h3>
-        <p class="goal"><span class="lang-et">Luua soodne ja funktsionaalne lennusimulaatori juhtpult.</span><span class="lang-en">Build an affordable, functional flight-simulator control panel.</span></p>
-        <div class="tags"><span class="tag lang-et">puutöö</span><span class="tag lang-et">Python</span><span class="tag lang-et">Arduino</span><span class="tag lang-en">woodworking</span><span class="tag lang-en">Python</span><span class="tag lang-en">Arduino</span></div>
+    </article>
+    <article class="card" data-tags="arduino 3d-printing-design electronics">
+      <img class="card-img" src="images/projects/watch-winder-1.jpg" alt="3D-printed watch winder" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/watch-winder.html"><span class="lang-et">Kellalaadija</span><span class="lang-en">Watch winder</span></a></h3>
+        <p><span class="lang-et">Luua mehaanilisele kellale laadimisseade, et vältida selle pidevat kandmist.</span><span class="lang-en">Create a winding device for a mechanical watch so it doesn&#x27;t have to be worn constantly.</span></p>
+        <div class="tags"><a class="tag emb" data-tag="arduino" href="index.html?tag=arduino#filters"><span class="lang-et">Arduino</span><span class="lang-en">Arduino</span></a><a class="tag mech" data-tag="3d-printing-design" href="index.html?tag=3d-printing-design#filters"><span class="lang-et">3D-printimine ja disain</span><span class="lang-en">3D printing &amp; design</span></a><a class="tag ee" data-tag="electronics" href="index.html?tag=electronics#filters"><span class="lang-et">Elektroonika</span><span class="lang-en">Electronics</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/watch-winder.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb"><img src="images/projects/watch-winder-1.jpg" alt="3D-printed watch winder" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">Kellalaadija</span><span class="lang-en">Watch winder</span></h3>
-        <p class="goal"><span class="lang-et">Luua mehaanilisele kellale laadimisseade, et vältida selle pidevat kandmist.</span><span class="lang-en">Create a winding device for a mechanical watch so it doesn&#x27;t have to be worn constantly.</span></p>
-        <div class="tags"><span class="tag lang-et">Arduino</span><span class="tag lang-et">3D-printimine ja disain</span><span class="tag lang-et">elektroonika</span><span class="tag lang-en">Arduino</span><span class="tag lang-en">3D printing &amp; design</span><span class="tag lang-en">electronics</span></div>
+    </article>
+    <article class="card" data-tags="c">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/film-warehouse.html"><span class="lang-et">Filmiladu</span><span class="lang-en">Film warehouse</span></a></h3>
+        <p><span class="lang-et">Luua lihtne andmebaasisüsteem filmide ja arvustuste haldamiseks.</span><span class="lang-en">Build a simple database system for managing films and reviews.</span></p>
+        <div class="tags"><a class="tag sw" data-tag="c" href="index.html?tag=c#filters"><span class="lang-et">C</span><span class="lang-en">C</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/film-warehouse.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb noimg"><span>F</span></div>
-      <div class="body">
-        <h3><span class="lang-et">Filmiladu</span><span class="lang-en">Film warehouse</span></h3>
-        <p class="goal"><span class="lang-et">Luua lihtne andmebaasisüsteem filmide ja arvustuste haldamiseks.</span><span class="lang-en">Build a simple database system for managing films and reviews.</span></p>
-        <div class="tags"><span class="tag lang-et">C</span><span class="tag lang-en">C</span></div>
+    </article>
+    <article class="card" data-tags="c">
+      <img class="card-img" src="images/projects/sales-calculator-1.png" alt="Calculator output 1" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/sales-calculator.html"><span class="lang-et">Müügitulemuste kalkulaator</span><span class="lang-en">Sales-results calculator</span></a></h3>
+        <p><span class="lang-et">Analüüsida müügiandmeid ja väljastada tulemused tekstina.</span><span class="lang-en">Analyse sales data and output the results as text.</span></p>
+        <div class="tags"><a class="tag sw" data-tag="c" href="index.html?tag=c#filters"><span class="lang-et">C</span><span class="lang-en">C</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
       </div>
-    </a>
-    <a class="card" href="projects/sales-calculator.html">
-      <span class="badge draft"><span class="lang-et">Mustand</span><span class="lang-en">Draft</span></span><div class="thumb"><img src="images/projects/sales-calculator-1.png" alt="Calculator output 1" loading="lazy"></div>
-      <div class="body">
-        <h3><span class="lang-et">Müügitulemuste kalkulaator</span><span class="lang-en">Sales-results calculator</span></h3>
-        <p class="goal"><span class="lang-et">Analüüsida müügiandmeid ja väljastada tulemused tekstina.</span><span class="lang-en">Analyse sales data and output the results as text.</span></p>
-        <div class="tags"><span class="tag lang-et">C</span><span class="tag lang-en">C</span></div>
+    </article>
+    </div>
+  </section>
+
+  <section class="projsec" id="robotprojects">
+    <h2><span class="lang-et">Robotid</span><span class="lang-en">Robots</span></h2>
+    <div class="grid">
+    <article class="card" data-tags="fusion-360 3d-printing-design arduino">
+      <img class="card-img" src="images/projects/robot-platform-1.jpg" alt="3D-printed modular robot platform" loading="lazy">
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/robot-platform.html"><span class="lang-et">Robotiplatvorm</span><span class="lang-en">Robot platform</span></a></h3>
+        <p><span class="lang-et">Luua modulaarne robotiplatvorm, millele saab lihtsalt lisada erinevaid sensoreid ja laiendusi.</span><span class="lang-en">Create a modular robot platform to which different sensors and extensions can easily be added.</span></p>
+        <div class="tags"><a class="tag mech" data-tag="fusion-360" href="index.html?tag=fusion-360#filters"><span class="lang-et">Fusion 360</span><span class="lang-en">Fusion 360</span></a><a class="tag mech" data-tag="3d-printing-design" href="index.html?tag=3d-printing-design#filters"><span class="lang-et">3D-printimine ja disain</span><span class="lang-en">3D printing &amp; design</span></a><a class="tag emb" data-tag="arduino" href="index.html?tag=arduino#filters"><span class="lang-et">Arduino</span><span class="lang-en">Arduino</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
       </div>
-    </a>
+    </article>
+    <article class="card" data-tags="arduino bluetooth-hc-04">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/phone-remote-robot.html"><span class="lang-et">Robot telefoni puldiga</span><span class="lang-en">Robot with a phone remote</span></a></h3>
+        <p><span class="lang-et">Kasutada telefoni güroskoopi ja muuta telefon roboti puldiks.</span><span class="lang-en">Use a phone&#x27;s gyroscope and turn the phone into the robot&#x27;s remote control.</span></p>
+        <div class="tags"><a class="tag emb" data-tag="arduino" href="index.html?tag=arduino#filters"><span class="lang-et">Arduino</span><span class="lang-en">Arduino</span></a><a class="tag emb" data-tag="bluetooth-hc-04" href="index.html?tag=bluetooth-hc-04#filters"><span class="lang-et">Bluetooth (HC-04)</span><span class="lang-en">Bluetooth (HC-04)</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
+      </div>
+    </article>
+    <article class="card" data-tags="arduino">
+      
+      <div class="card-body">
+        <h3><a class="card-link" href="projects/line-follower.html"><span class="lang-et">Joonejälgija robot</span><span class="lang-en">Line-following robot</span></a></h3>
+        <p><span class="lang-et">Luua lihtne joonejälgija roboti katsetamiseks.</span><span class="lang-en">Build a simple line follower to experiment with the robot.</span></p>
+        <div class="tags"><a class="tag emb" data-tag="arduino" href="index.html?tag=arduino#filters"><span class="lang-et">Arduino</span><span class="lang-en">Arduino</span></a><span class="tag draft"><span class="lang-et">mustand</span><span class="lang-en">draft</span></span></div>
+      </div>
+    </article>
     </div>
   </section>
 </main>
 
-<footer class="wrap" style="padding-top:0;">
-  <p>
-    <span class="lang-et">Võta ühendust:</span><span class="lang-en">Get in touch:</span>
-    <a href="mailto:joosepfi@gmail.com">joosepfi@gmail.com</a> ·
-    <a href="https://github.com/joosepf">GitHub</a> ·
-    <a href="https://www.linkedin.com/in/joosep-fingling-432716b1/?skipRedirect=true">LinkedIn</a>
-  </p>
+<footer>
+  <div class="wrap">
+    <p><a href="mailto:joosepfi@gmail.com">joosepfi@gmail.com</a><span class="sep"> · </span><a href="https://github.com/joosepf">GitHub</a><span class="sep"> · </span><a href="https://www.linkedin.com/in/joosep-fingling-432716b1/">LinkedIn</a></p>
+  </div>
 </footer>
-<div class="lb" id="lightbox"><img src="" alt=""></div>
+<div class="lb" id="lightbox"><img alt=""></div>
 <script src="assets/portfolio.js"></script>
 </body>
 </html>

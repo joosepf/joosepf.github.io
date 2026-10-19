@@ -6,13 +6,15 @@ from the project portfolio.
 ## Structure
 
 ```
-index.html              Homepage — list of all projects (finished → in-progress → drafts)
+index.html              Homepage — projects in sections (Formula Student / other / robots),
+                        each ordered finished → in-progress → drafts
 gallery.html            Image gallery of all project photos (with lightbox)
 projects/<slug>.html    One page per project (goal, description, tools, links, images)
-assets/portfolio.css    Shared styles (light/dark, responsive)
+assets/portfolio.css    Shared styles (light/dark, responsive), same look as the CV
+assets/fonts/           IBM Plex Sans (self-hosted, SIL OFL licence in OFL.txt)
 assets/portfolio.js     Language toggle (ET/EN, remembered) + lightbox
 images/projects/        Project images
-docs/                   CV and other PDFs
+docs/                   CV (cv-et.pdf / cv-en.pdf, linked per language) and other PDFs
 build/generate.py       Generator — the single source of truth for the pages
 ```
 
@@ -25,6 +27,13 @@ toggles between them and remembers the choice (via `localStorage`). Estonian is 
 
 All project text (titles, goals, descriptions, tools, links, images, draft/ongoing flags)
 lives in one place — the `P = [...]` list in [build/generate.py](build/generate.py).
+A project's `group` (`"fs"`, `"robots"`, or omitted for the general list) picks its homepage
+section; the sections themselves are defined in `SECTIONS` in the same file.
+
+Tools (`tools_et` / `tools_en`) are shown as coloured tags. The colour comes from `TAG_KIND`
+(keyed by the English name; anything missing is grey). Every tag links to
+`index.html?tag=<key>`, which shows only the projects with that tag; the key is made from the
+English name, so use exactly the same English spelling for the same tool everywhere.
 After editing it, regenerate every page:
 
 ```bash
