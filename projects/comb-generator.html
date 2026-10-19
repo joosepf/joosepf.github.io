@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="et" data-lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#8ccbf7">
+<title>Kammgeneraator | Joosep Fingling</title>
+<meta name="description" content="Build a comb generator that gives a known, repeatable 0–1 GHz reference signal for calibrating and comparing the probes.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script>try{var l=localStorage.getItem('site-lang')==='en'?'en':'et';document.documentElement.dataset.lang=l;document.documentElement.setAttribute('lang',l)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Joosep Fingling</a>
+    <nav>
+      <a href="../index.html#fsprojects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
+      <a href="../gallery.html"><span class="lang-et">Galerii</span><span class="lang-en">Gallery</span></a>
+      <a class="lang-et" href="../docs/cv-et.pdf">CV</a><a class="lang-en" href="../docs/cv-en.pdf">CV</a>
+      <span class="langtoggle" role="group" aria-label="Language">
+        <button type="button" data-set="et" aria-label="Eesti keeles">ET</button><span aria-hidden="true">/</span><button type="button" data-set="en" aria-label="In English">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <p class="back"><a href="../index.html">← <span class="lang-et">Kõik projektid</span><span class="lang-en">All projects</span></a></p>
+  <h1><span class="lang-et">Kammgeneraator</span><span class="lang-en">Comb generator</span></h1>
+  <div class="tags"><a class="tag ee" data-tag="ltspice" href="../index.html?tag=ltspice#filters"><span class="lang-et">LTspice</span><span class="lang-en">LTspice</span></a><a class="tag ee" data-tag="emc" href="../index.html?tag=emc#filters"><span class="lang-et">EMC</span><span class="lang-en">EMC</span></a><a class="tag mech" data-tag="cad" href="../index.html?tag=cad#filters"><span class="lang-et">CAD</span><span class="lang-en">CAD</span></a></div>
+  
+
+  <h2><span class="lang-et">Eesmärk</span><span class="lang-en">Goal</span></h2>
+  <p class="lang-et">Valmistada kammgeneraator, mis annab teadaoleva ja korratava võrdlussignaali 0–1 GHz vahemikus sondide kalibreerimiseks ja võrdlemiseks.</p>
+  <p class="lang-en">Build a comb generator that gives a known, repeatable 0–1 GHz reference signal for calibrating and comparing the probes.</p>
+
+  <h2><span class="lang-et">Kirjeldus</span><span class="lang-en">Description</span></h2>
+  <p class="lang-et">Kammgeneraator tekitab ühtlaste vahedega harmoonikutest koosneva spektri. Meil on see sondide kalibreerimis- ja võrdlusseade, õige antenniga saab seda kasutada ka mürageneraatorina. Hindasin nelja lahendust: ruutsignaalil põhinevat (kristall või mikrokontroller), sammtaastumisdioodiga (SRD), laviintransistoriga ja sagedussüntesaatoriga. LTspice&#x27;i simulatsioonide ja prototüüpide põhjal jõudsid trükkplaadini ruutsignaali- ja SRD-lahendus; laviinilahendus jäi kõrvale ~100 V toitepinge ja süntesaator keerukuse tõttu. Seadmele disainisin ka SLS-prinditud korpuse.</p>
+  <p class="lang-en">A comb generator outputs a spectrum of evenly spaced harmonics. For us it is the calibration and reference device for the probes, and with the right antenna it can also serve as a noise source. I evaluated four approaches: square-wave based (crystal or microcontroller), step-recovery diode (SRD), avalanche transistor and frequency synthesizer. Based on LTspice simulations and prototypes, the square-wave and SRD designs went on to PCB; the avalanche design was dropped because of its ~100 V supply and the synthesizer because of its complexity. I also designed its SLS-printed enclosure.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="mailto:joosepfi@gmail.com">joosepfi@gmail.com</a><span class="sep"> · </span><a href="https://github.com/joosepf">GitHub</a><span class="sep"> · </span><a href="https://www.linkedin.com/in/joosep-fingling-432716b1/">LinkedIn</a></p>
+  </div>
+</footer>
+<div class="lb" id="lightbox"><img alt=""></div>
+<script src="../assets/portfolio.js"></script>
+</body>
+</html>

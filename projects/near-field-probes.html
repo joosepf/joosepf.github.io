@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="et" data-lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#8ccbf7">
+<title>Lähivälja sondid | Joosep Fingling</title>
+<meta name="description" content="Build low-cost in-house near-field probes so the team can locate interference sources on the car&#x27;s PCBs and wiring.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script>try{var l=localStorage.getItem('site-lang')==='en'?'en':'et';document.documentElement.dataset.lang=l;document.documentElement.setAttribute('lang',l)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Joosep Fingling</a>
+    <nav>
+      <a href="../index.html#fsprojects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
+      <a href="../gallery.html"><span class="lang-et">Galerii</span><span class="lang-en">Gallery</span></a>
+      <a class="lang-et" href="../docs/cv-et.pdf">CV</a><a class="lang-en" href="../docs/cv-en.pdf">CV</a>
+      <span class="langtoggle" role="group" aria-label="Language">
+        <button type="button" data-set="et" aria-label="Eesti keeles">ET</button><span aria-hidden="true">/</span><button type="button" data-set="en" aria-label="In English">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <p class="back"><a href="../index.html">← <span class="lang-et">Kõik projektid</span><span class="lang-en">All projects</span></a></p>
+  <h1><span class="lang-et">Lähivälja sondid</span><span class="lang-en">Near-field probes</span></h1>
+  <div class="tags"><a class="tag ee" data-tag="altium-designer" href="../index.html?tag=altium-designer#filters"><span class="lang-et">Altium Designer</span><span class="lang-en">Altium Designer</span></a><a class="tag ee" data-tag="emc" href="../index.html?tag=emc#filters"><span class="lang-et">EMC</span><span class="lang-en">EMC</span></a><a class="tag ee" data-tag="vna" href="../index.html?tag=vna#filters"><span class="lang-et">VNA</span><span class="lang-en">VNA</span></a></div>
+  
+
+  <h2><span class="lang-et">Eesmärk</span><span class="lang-en">Goal</span></h2>
+  <p class="lang-et">Valmistada meeskonnale odavad lähivälja sondid, et leida auto trükkplaatidel ja juhtmestikus häirete allikad.</p>
+  <p class="lang-en">Build low-cost in-house near-field probes so the team can locate interference sources on the car&#x27;s PCBs and wiring.</p>
+
+  <h2><span class="lang-et">Kirjeldus</span><span class="lang-en">Description</span></h2>
+  <p class="lang-et">Müügilolevad EMC-mõõtevahendid on kallid, seega valmistasime omad (ajapuuduse tõttu olemasolevate, end tõestanud disainide põhjal). Peamine nõue oli 50 Ω impedants: rajalaiused arvutati selle järgi ja tulemust kontrolliti vektorvõrguanalüsaatoriga. Valmis kolm H-välja (H01–H03) ja kolm E-välja sondi (E01–E03), mida võrdlesin 0–1 GHz vahemikus Rohde &amp; Schwarzi HZ-11 komplektiga, kasutades signaaliallikana meie oma kammgeneraatorit. Parimad, H01 ja E02, annavad müügilolevate sondidega väga sarnase signaalikuju, kuigi veidi madalama tundlikkusega.</p>
+  <p class="lang-en">Commercial EMC test equipment is expensive, so we built our own (based on existing, proven designs because of time constraints). The key requirement was a 50 Ω impedance: trace widths were calculated to match and verified with a vector network analyser. Three H-field (H01–H03) and three E-field probes (E01–E03) were made, and I compared them against the Rohde &amp; Schwarz HZ-11 set over 0–1 GHz, using our own comb generator as the signal source. The best ones, H01 and E02, give a signal shape very close to the commercial probes, at slightly lower sensitivity.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="mailto:joosepfi@gmail.com">joosepfi@gmail.com</a><span class="sep"> · </span><a href="https://github.com/joosepf">GitHub</a><span class="sep"> · </span><a href="https://www.linkedin.com/in/joosep-fingling-432716b1/">LinkedIn</a></p>
+  </div>
+</footer>
+<div class="lb" id="lightbox"><img alt=""></div>
+<script src="../assets/portfolio.js"></script>
+</body>
+</html>

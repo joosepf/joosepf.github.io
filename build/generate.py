@@ -569,3 +569,18 @@ for p in P:
     build_project(p)
 build_gallery()
 print("Generated index.html, gallery.html and", len(P), "project pages.")
+
+# GitHub Pages only serves committed files: warn about new files git doesn't track yet
+try:
+    import subprocess
+    new = subprocess.run(["git", "ls-files", "--others", "--exclude-standard"], cwd=ROOT,
+                         capture_output=True, text=True, timeout=10).stdout.split()
+    if new:
+        print(f"\nNote: {len(new)} new file(s) are not in git yet, so GitHub Pages won't have them:")
+        for f in new[:15]:
+            print("   " + f)
+        if len(new) > 15:
+            print("   ...")
+        print("Add them before committing:  git add -A")
+except Exception:
+    pass

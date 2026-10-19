@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="et" data-lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#8ccbf7">
+<title>CANQueen | Joosep Fingling</title>
+<meta name="description" content="Build a CAN bus monitor and transmitter that works with adapters from many manufacturers as well as open-source ones.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script>try{var l=localStorage.getItem('site-lang')==='en'?'en':'et';document.documentElement.dataset.lang=l;document.documentElement.setAttribute('lang',l)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Joosep Fingling</a>
+    <nav>
+      <a href="../index.html#fsprojects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
+      <a href="../gallery.html"><span class="lang-et">Galerii</span><span class="lang-en">Gallery</span></a>
+      <a class="lang-et" href="../docs/cv-et.pdf">CV</a><a class="lang-en" href="../docs/cv-en.pdf">CV</a>
+      <span class="langtoggle" role="group" aria-label="Language">
+        <button type="button" data-set="et" aria-label="Eesti keeles">ET</button><span aria-hidden="true">/</span><button type="button" data-set="en" aria-label="In English">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <p class="back"><a href="../index.html">← <span class="lang-et">Kõik projektid</span><span class="lang-en">All projects</span></a></p>
+  <h1><span class="lang-et">CANQueen</span><span class="lang-en">CANQueen</span></h1>
+  <div class="tags"><a class="tag sw" data-tag="python" href="../index.html?tag=python#filters"><span class="lang-et">Python</span><span class="lang-en">Python</span></a><a class="tag sw" data-tag="pyside6" href="../index.html?tag=pyside6#filters"><span class="lang-et">PySide6</span><span class="lang-en">PySide6</span></a><a class="tag sw" data-tag="python-can" href="../index.html?tag=python-can#filters"><span class="lang-et">python-can</span><span class="lang-en">python-can</span></a><a class="tag emb" data-tag="can-fd" href="../index.html?tag=can-fd#filters"><span class="lang-et">CAN FD</span><span class="lang-en">CAN FD</span></a></div>
+  
+
+  <h2><span class="lang-et">Eesmärk</span><span class="lang-en">Goal</span></h2>
+  <p class="lang-et">Luua CAN-siini monitor ja saatja, mis töötab eri tootjate ja avatud lähtekoodiga CAN-adapteritega.</p>
+  <p class="lang-en">Build a CAN bus monitor and transmitter that works with adapters from many manufacturers as well as open-source ones.</p>
+
+  <h2><span class="lang-et">Kirjeldus</span><span class="lang-en">Description</span></h2>
+  <p class="lang-et">Kvaser CANKingist ja CANTrace&#x27;ist inspireeritud töölauarakendus FS Team Tallinnale (Windows ja Linux). Jälgib korraga mitut CAN-kanalit, dekodeerib liiklust DBC-failide põhjal, saadab ühekordseid ja tsüklilisi sõnumeid ning toetab CAN FD-d ja riistvaralisi ajatempleid. Sisaldab ka auto ülevaatepaneeli (plaadid, aku). Töötab Kvaseri, PEAK-i, Vectori ja IXXAT-i adapterite ning avatud lähtekoodiga gs_usb- ja slcan-adapteritega, sh meie oma USB–CAN-adapteriga. Meeskonnaliikmed uuendavad seda git&#x27;i kaudu; koodi katab üle 1000 testi.</p>
+  <p class="lang-en">A desktop app for FS Team Tallinn (Windows and Linux), inspired by Kvaser CANKing and CANTrace. It monitors several CAN channels at once, decodes traffic against DBC files, sends single-shot and cyclic messages, and supports CAN FD and hardware timestamps. It also has a car overview dashboard (boards, accumulator). It works with Kvaser, PEAK, Vector and IXXAT adapters as well as open-source gs_usb and slcan adapters, including our own USB-to-CAN adapter. Teammates update it through git, and the code is covered by over 1000 tests.</p>
+
+  <h2><span class="lang-et">Pildid</span><span class="lang-en">Images</span></h2>
+  <div class="gallery">
+    <figure><img src="../images/projects/canqueen-1.png" alt="CANQueen monitoring a CAN bus: DBC-decoded messages and the transmit panel (demo DBC)" loading="lazy"><figcaption><span class="lang-et">CANQueen jälgib CAN-siini: DBC-ga dekodeeritud sõnumid ja saatmispaneel (näidis-DBC)</span><span class="lang-en">CANQueen monitoring a CAN bus: DBC-decoded messages and the transmit panel (demo DBC)</span></figcaption></figure>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="mailto:joosepfi@gmail.com">joosepfi@gmail.com</a><span class="sep"> · </span><a href="https://github.com/joosepf">GitHub</a><span class="sep"> · </span><a href="https://www.linkedin.com/in/joosep-fingling-432716b1/">LinkedIn</a></p>
+  </div>
+</footer>
+<div class="lb" id="lightbox"><img alt=""></div>
+<script src="../assets/portfolio.js"></script>
+</body>
+</html>

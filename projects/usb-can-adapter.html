@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="et" data-lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#8ccbf7">
+<title>USB–CAN FD adapter (DIY_KVASER) | Joosep Fingling</title>
+<meta name="description" content="Give the team a low-cost USB-to-CAN adapter that works without extra drivers on both Windows and Linux.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script>try{var l=localStorage.getItem('site-lang')==='en'?'en':'et';document.documentElement.dataset.lang=l;document.documentElement.setAttribute('lang',l)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Joosep Fingling</a>
+    <nav>
+      <a href="../index.html#fsprojects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
+      <a href="../gallery.html"><span class="lang-et">Galerii</span><span class="lang-en">Gallery</span></a>
+      <a class="lang-et" href="../docs/cv-et.pdf">CV</a><a class="lang-en" href="../docs/cv-en.pdf">CV</a>
+      <span class="langtoggle" role="group" aria-label="Language">
+        <button type="button" data-set="et" aria-label="Eesti keeles">ET</button><span aria-hidden="true">/</span><button type="button" data-set="en" aria-label="In English">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <p class="back"><a href="../index.html">← <span class="lang-et">Kõik projektid</span><span class="lang-en">All projects</span></a></p>
+  <h1><span class="lang-et">USB–CAN FD adapter (DIY_KVASER)</span><span class="lang-en">USB-to-CAN FD adapter (DIY_KVASER)</span></h1>
+  <div class="tags"><a class="tag emb" data-tag="stm32" href="../index.html?tag=stm32#filters"><span class="lang-et">STM32</span><span class="lang-en">STM32</span></a><a class="tag sw" data-tag="c" href="../index.html?tag=c#filters"><span class="lang-et">C</span><span class="lang-en">C</span></a><a class="tag emb" data-tag="freertos" href="../index.html?tag=freertos#filters"><span class="lang-et">FreeRTOS</span><span class="lang-en">FreeRTOS</span></a><a class="tag emb" data-tag="can-fd" href="../index.html?tag=can-fd#filters"><span class="lang-et">CAN FD</span><span class="lang-en">CAN FD</span></a></div>
+  
+
+  <h2><span class="lang-et">Eesmärk</span><span class="lang-en">Goal</span></h2>
+  <p class="lang-et">Anda meeskonnale odav USB–CAN-adapter, mis töötab ilma eraldi draiverita nii Windowsis kui ka Linuxis.</p>
+  <p class="lang-en">Give the team a low-cost USB-to-CAN adapter that works without extra drivers on both Windows and Linux.</p>
+
+  <h2><span class="lang-et">Kirjeldus</span><span class="lang-en">Description</span></h2>
+  <p class="lang-et">Püsivara meeskonna STM32G431-põhisele plaadile. See rakendab gs_usb/candleLighti protokolli, nii et Linuxis töötab adapter tuuma draiveriga (SocketCAN) ja Windowsis paigaldub WinUSB kaudu automaatselt. Toetab CAN 2.0 ja CAN FD-d bitikiiruse vahetusega; kontrollisin pingil Kvaser Memorator Pro vastu kõiki klassikalisi kiirusi 10 kbit/s – 1 Mbit/s ja CAN FD andmefaasi kuni 8 Mbit/s. Porditud projektist budgetcan-fw (FreeRTOS).</p>
+  <p class="lang-en">Firmware for the team&#x27;s STM32G431-based board. It implements the gs_usb/candleLight protocol, so the adapter works with the Linux kernel driver (SocketCAN) and installs itself on Windows through WinUSB. It supports CAN 2.0 and CAN FD with bit-rate switching; I verified it on the bench against a Kvaser Memorator Pro at every classic rate from 10 kbit/s to 1 Mbit/s and with CAN FD data phases up to 8 Mbit/s. Ported from budgetcan-fw (FreeRTOS).</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="mailto:joosepfi@gmail.com">joosepfi@gmail.com</a><span class="sep"> · </span><a href="https://github.com/joosepf">GitHub</a><span class="sep"> · </span><a href="https://www.linkedin.com/in/joosep-fingling-432716b1/">LinkedIn</a></p>
+  </div>
+</footer>
+<div class="lb" id="lightbox"><img alt=""></div>
+<script src="../assets/portfolio.js"></script>
+</body>
+</html>

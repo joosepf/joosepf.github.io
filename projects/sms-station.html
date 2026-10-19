@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="et" data-lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#8ccbf7">
+<title>SMS-jaam väravale | Joosep Fingling</title>
+<meta name="description" content="Build a GSM station that opens a gate with a phone call or a text message.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script>try{var l=localStorage.getItem('site-lang')==='en'?'en':'et';document.documentElement.dataset.lang=l;document.documentElement.setAttribute('lang',l)}catch(e){}</script>
+<link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../index.html">Joosep Fingling</a>
+    <nav>
+      <a href="../index.html#fsprojects"><span class="lang-et">Projektid</span><span class="lang-en">Projects</span></a>
+      <a href="../gallery.html"><span class="lang-et">Galerii</span><span class="lang-en">Gallery</span></a>
+      <a class="lang-et" href="../docs/cv-et.pdf">CV</a><a class="lang-en" href="../docs/cv-en.pdf">CV</a>
+      <span class="langtoggle" role="group" aria-label="Language">
+        <button type="button" data-set="et" aria-label="Eesti keeles">ET</button><span aria-hidden="true">/</span><button type="button" data-set="en" aria-label="In English">EN</button>
+      </span>
+    </nav>
+  </div>
+</header>
+<main class="wrap narrow">
+  <p class="back"><a href="../index.html">← <span class="lang-et">Kõik projektid</span><span class="lang-en">All projects</span></a></p>
+  <h1><span class="lang-et">SMS-jaam väravale</span><span class="lang-en">SMS gate station</span></h1>
+  <div class="tags"><a class="tag emb" data-tag="esp32" href="../index.html?tag=esp32#filters"><span class="lang-et">ESP32</span><span class="lang-en">ESP32</span></a><a class="tag sw" data-tag="cplusplus" href="../index.html?tag=cplusplus#filters"><span class="lang-et">C++</span><span class="lang-en">C++</span></a><a class="tag emb" data-tag="platformio" href="../index.html?tag=platformio#filters"><span class="lang-et">PlatformIO</span><span class="lang-en">PlatformIO</span></a><a class="tag emb" data-tag="gsm" href="../index.html?tag=gsm#filters"><span class="lang-et">GSM</span><span class="lang-en">GSM</span></a><span class="tag ongoing"><span class="lang-et">pooleli</span><span class="lang-en">in progress</span></span></div>
+  
+
+  <h2><span class="lang-et">Eesmärk</span><span class="lang-en">Goal</span></h2>
+  <p class="lang-et">Ehitada GSM-jaam, millega saab värava avada telefonikõne või SMS-iga.</p>
+  <p class="lang-en">Build a GSM station that opens a gate with a phone call or a text message.</p>
+
+  <h2><span class="lang-et">Kirjeldus</span><span class="lang-en">Description</span></h2>
+  <p class="lang-et">ESP32 ja SIM800L-mooduli põhine seade. Kasutajatel on rollid (juhuslik, liige, helistaja, omanik): liige avab värava SMS-iga, helistaja ka kõnega ning omanik haldab numbreid SMS-käskudega. Kõik kõned ja sõnumid logitakse ning kõike saab hallata ka veebiliidese kaudu; esimesel käivitamisel avab seade oma WiFi-pääsupunkti, mille kaudu saab selle koduvõrku ühendada.</p>
+  <p class="lang-en">Built on an ESP32 and a SIM800L module. Users have roles (random, member, caller, owner): members open the gate by SMS, callers by calling as well, and owners manage the number list with SMS commands. Every call and message is logged, and everything can also be managed through a web interface; on first boot the device opens its own Wi-Fi access point for connecting it to the home network.</p>
+
+  <h2><span class="lang-et">Pildid</span><span class="lang-en">Images</span></h2>
+  <div class="gallery">
+    <figure><img src="../images/projects/sms-station-1.png" alt="SMS station web interface: opening statistics (sample data)" loading="lazy"><figcaption><span class="lang-et">SMS-jaama veebiliides: avamiste statistika (näidisandmed)</span><span class="lang-en">SMS station web interface: opening statistics (sample data)</span></figcaption></figure>
+    <figure><img src="../images/projects/sms-station-2.png" alt="SMS station event log (sample data)" loading="lazy"><figcaption><span class="lang-et">SMS-jaama sündmuste logi (näidisandmed)</span><span class="lang-en">SMS station event log (sample data)</span></figcaption></figure>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="mailto:joosepfi@gmail.com">joosepfi@gmail.com</a><span class="sep"> · </span><a href="https://github.com/joosepf">GitHub</a><span class="sep"> · </span><a href="https://www.linkedin.com/in/joosep-fingling-432716b1/">LinkedIn</a></p>
+  </div>
+</footer>
+<div class="lb" id="lightbox"><img alt=""></div>
+<script src="../assets/portfolio.js"></script>
+</body>
+</html>
